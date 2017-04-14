@@ -42,11 +42,19 @@ create table Website
 	[Password] nvarchar(50) not null
 )
 go
+insert into Website values('Fun Modern Electronics', 'http://www.FunModernElectronics.com', 'FME', '.\sqlexpress', 'techstar_funmodernelectro', 'techstar_admin', 'Xmod350!')
+insert into Website values('His & Hers Closet', 'http://www.HisAndHersCloset.com', 'HHC', '.\sqlexpress', 'techstar_hishers', 'techstar_admin', 'Xmod350!')
+insert into Website values('Home & Garden Statues', 'http://www.HomeAndGardenStatues.com', 'HGS', '.\sqlexpress', 'techstar_homegarden', 'techstar_admin', 'Xmod350!')
+insert into Website values('Outdoors Fun Gear', 'http://www.OutdoorsFunGear.com', 'OFG', '.\sqlexpress', 'techstar_outdoors', 'techstar_admin', 'Xmod350!')
+insert into Website values('Toys & Games Room', 'http://www.ToysAndGamesRoom.com', 'TGR', '.\sqlexpress', 'techstar_toysgames', 'techstar_admin', 'Xmod350!')
+
+/*
 insert into Website values('Fun Modern Electronics', 'http://www.FunModernElectronics.com', 'FME', 'xdbs5.dailyrazor.com', 'techstar_funmodernelectro', 'techstar_admin', 'Xmod350!')
 insert into Website values('His & Hers Closet', 'http://www.HisAndHersCloset.com', 'HHC', 'xdbs5.dailyrazor.com', 'techstar_hishers', 'techstar_admin', 'Xmod350!')
 insert into Website values('Home & Garden Statues', 'http://www.HomeAndGardenStatues.com', 'HGS', 'xdbs5.dailyrazor.com', 'techstar_homegarden', 'techstar_admin', 'Xmod350!')
 insert into Website values('Outdoors Fun Gear', 'http://www.OutdoorsFunGear.com', 'OFG', 'xdbs5.dailyrazor.com', 'techstar_outdoors', 'techstar_admin', 'Xmod350!')
 insert into Website values('Toys & Games Room', 'http://www.ToysAndGamesRoom.com', 'TGR', 'xdbs5.dailyrazor.com', 'techstar_toysgames', 'techstar_admin', 'Xmod350!')
+*/
 go
 
 if exists(select 1 from INFORMATION_SCHEMA.TABLES where TABLE_NAME = N'Product')
