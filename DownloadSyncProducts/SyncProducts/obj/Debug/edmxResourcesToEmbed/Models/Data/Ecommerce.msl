@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EcommerceModelStoreContainer" CdmEntityContainer="EcommerceEntities">
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="EcommerceModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="ItemNum" ColumnName="ItemNum" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductDescription" ColumnName="ProductDescription" />
+          <ScalarProperty Name="ProductDescriptionOrignalHtml" ColumnName="ProductDescriptionOrignalHtml" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Category1" ColumnName="Category1" />
+          <ScalarProperty Name="Category2" ColumnName="Category2" />
+          <ScalarProperty Name="Category3" ColumnName="Category3" />
+          <ScalarProperty Name="Category4" ColumnName="Category4" />
+          <ScalarProperty Name="RetailPrice" ColumnName="RetailPrice" />
+          <ScalarProperty Name="WholesalePriceBeforeMarkup" ColumnName="WholesalePriceBeforeMarkup" />
+          <ScalarProperty Name="MAPPrice" ColumnName="MAPPrice" />
+          <ScalarProperty Name="SupplierHandlingFee" ColumnName="SupplierHandlingFee" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="QtyInStock" ColumnName="QtyInStock" />
+          <ScalarProperty Name="InStock" ColumnName="InStock" />
+          <ScalarProperty Name="UPC" ColumnName="UPC" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="URLToLargeImage" ColumnName="URLToLargeImage" />
+          <ScalarProperty Name="URLToThumbImage" ColumnName="URLToThumbImage" />
+          <ScalarProperty Name="RefurbishedFlag" ColumnName="RefurbishedFlag" />
+          <ScalarProperty Name="AttributeList" ColumnName="AttributeList" />
+          <ScalarProperty Name="ShippingForUSA" ColumnName="ShippingForUSA" />
+          <ScalarProperty Name="ManufacturerProdId" ColumnName="ManufacturerProdId" />
+          <ScalarProperty Name="ShippingLength" ColumnName="ShippingLength" />
+          <ScalarProperty Name="ShippingWidth" ColumnName="ShippingWidth" />
+          <ScalarProperty Name="ShippingHeight" ColumnName="ShippingHeight" />
+          <ScalarProperty Name="SalesTaxPct" ColumnName="SalesTaxPct" />
+          <ScalarProperty Name="SalesTaxState" ColumnName="SalesTaxState" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="ShippingForCanada" ColumnName="ShippingForCanada" />
+          <ScalarProperty Name="ShippingForInternational" ColumnName="ShippingForInternational" />
+          <ScalarProperty Name="W2bHandlingFee" ColumnName="W2bHandlingFee" />
+          <ScalarProperty Name="W2B3PctTransactionFeeUSA" ColumnName="W2B3PctTransactionFeeUSA" />
+          <ScalarProperty Name="W2B3PctTransactionFeeCanada" ColumnName="W2B3PctTransactionFeeCanada" />
+          <ScalarProperty Name="W2B3PctTransactionFeeInternational" ColumnName="W2B3PctTransactionFeeInternational" />
+          <ScalarProperty Name="USAZONE" ColumnName="USAZONE" />
+          <ScalarProperty Name="CANADAZONE" ColumnName="CANADAZONE" />
+          <ScalarProperty Name="Attributes" ColumnName="Attributes" />
+          <ScalarProperty Name="ExtraImg1" ColumnName="ExtraImg1" />
+          <ScalarProperty Name="ExtraImg2" ColumnName="ExtraImg2" />
+          <ScalarProperty Name="ExtraImg3" ColumnName="ExtraImg3" />
+          <ScalarProperty Name="ExtraImg4" ColumnName="ExtraImg4" />
+          <ScalarProperty Name="ExtraImg5" ColumnName="ExtraImg5" />
+          <ScalarProperty Name="ExtraImg6" ColumnName="ExtraImg6" />
+          <ScalarProperty Name="DescriptionNoHtml" ColumnName="DescriptionNoHtml" />
+          <ScalarProperty Name="SupplierNameItemNumber" ColumnName="SupplierNameItemNumber" />
+          <ScalarProperty Name="SupplierCategory1" ColumnName="SupplierCategory1" />
+          <ScalarProperty Name="SupplierCategory2" ColumnName="SupplierCategory2" />
+          <ScalarProperty Name="SupplierCategory3" ColumnName="SupplierCategory3" />
+          <ScalarProperty Name="SupplierCategory4" ColumnName="SupplierCategory4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Websites">
+      <EntityTypeMapping TypeName="EcommerceModel.Website">
+        <MappingFragment StoreEntitySet="Website">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Abbrev" ColumnName="Abbrev" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WebsiteProducts">
+      <EntityTypeMapping TypeName="EcommerceModel.WebsiteProduct">
+        <MappingFragment StoreEntitySet="WebsiteProduct">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="WebsiteId" ColumnName="WebsiteId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

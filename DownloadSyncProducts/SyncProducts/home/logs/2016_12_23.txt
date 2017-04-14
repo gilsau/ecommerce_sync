@@ -1,0 +1,62 @@
+----------------------------------------------------------------------------------
+12/23/2016 22:37:18 - Alex
+TIMEOUT EXPIRED.  THE TIMEOUT PERIOD ELAPSED PRIOR TO COMPLETION OF THE OPERATION OR THE SERVER IS NOT RESPONDING.
+INNER EXCEPTION
+The wait operation timed out
+
+STACK TRACE
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at SyncProducts.Data.DataProvider.GetDataTable(String sql, Result& result) in C:\projects\Ecommerce\DownloadSyncProductsApp\DownloadSyncProducts\SyncProducts\Data\DataProvider.cs:line 26
+
+SOURCE
+.Net SqlClient Data Provider
+
+TARGET NAME
+OnError
+
+TARGET MODULE NAME
+System.Data.dll
+
+Failed to ExecuteQuery: select ROW_NUMBER() over (order by Category1, Category2, Category3) as RowNum, Category1, Category2, Category3, Products=COUNT(productname) from productimport where ltrim(rtrim(suppliercategory1)) <> '' group by Category1, Category2, Category3 order by Category1, Category2, Category3 
+----------------------------------------------------------------------------------
+12/23/2016 23:59:45 - Alex
+TIMEOUT EXPIRED.  THE TIMEOUT PERIOD ELAPSED PRIOR TO COMPLETION OF THE OPERATION OR THE SERVER IS NOT RESPONDING.
+INNER EXCEPTION
+The wait operation timed out
+
+STACK TRACE
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at SyncProducts.Data.DataProvider.GetDataTable(String sql, Result& result) in C:\projects\Ecommerce\DownloadSyncProductsApp\DownloadSyncProducts\SyncProducts\Data\DataProvider.cs:line 26
+
+SOURCE
+.Net SqlClient Data Provider
+
+TARGET NAME
+OnError
+
+TARGET MODULE NAME
+System.Data.dll
+
+Failed to ExecuteQuery: select ROW_NUMBER() over (order by Category1, Category2, Category3) as RowNum, Category1, Category2, Category3, Products=COUNT(productname) from productimport where ltrim(rtrim(suppliercategory1)) <> '' group by Category1, Category2, Category3 order by Category1, Category2, Category3 

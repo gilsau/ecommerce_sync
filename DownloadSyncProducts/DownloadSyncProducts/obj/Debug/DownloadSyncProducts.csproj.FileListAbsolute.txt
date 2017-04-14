@@ -1,0 +1,10 @@
+C:\projects\Ecommerce\DownloadSyncProducts\DownloadSyncProducts\DownloadSyncProducts\bin\Debug\DownloadSyncProducts.exe.config
+C:\projects\Ecommerce\DownloadSyncProductsApp\DownloadSyncProducts\DownloadSyncProducts\bin\Debug\DownloadSyncProducts.exe.config
+C:\projects\Ecommerce\DownloadSyncProductsApp\DownloadSyncProducts\DownloadSyncProducts\bin\Debug\DownloadSyncProducts.exe
+C:\projects\Ecommerce\DownloadSyncProductsApp\DownloadSyncProducts\DownloadSyncProducts\bin\Debug\DownloadSyncProducts.pdb
+C:\projects\Ecommerce\DownloadSyncProductsApp\DownloadSyncProducts\DownloadSyncProducts\obj\Debug\DownloadSyncProducts.csprojResolveAssemblyReference.cache
+C:\projects\Ecommerce\DownloadSyncProductsApp\DownloadSyncProducts\DownloadSyncProducts\obj\Debug\DownloadSyncProducts.Properties.Resources.resources
+C:\projects\Ecommerce\DownloadSyncProductsApp\DownloadSyncProducts\DownloadSyncProducts\obj\Debug\DownloadSyncProducts.csproj.GenerateResource.Cache
+C:\projects\Ecommerce\DownloadSyncProductsApp\DownloadSyncProducts\DownloadSyncProducts\obj\Debug\DownloadSyncProducts.exe
+C:\projects\Ecommerce\DownloadSyncProductsApp\DownloadSyncProducts\DownloadSyncProducts\obj\Debug\DownloadSyncProducts.pdb
+C:\projects\Ecommerce\DownloadSyncProductsApp\DownloadSyncProducts\DownloadSyncProducts\obj\Debug\DownloadSyncProducts.frmMain.resources

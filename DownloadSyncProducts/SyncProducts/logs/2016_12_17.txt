@@ -1,0 +1,72 @@
+----------------------------------------------------------------------------------
+12/17/2016 22:04:01 - Alex
+EXECUTEREADER: CONNECTION PROPERTY HAS NOT BEEN INITIALIZED.
+INNER EXCEPTION
+
+
+STACK TRACE
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at SyncProducts.Data.DataProvider.GetReader(String sql, Result& result) in C:\projects\Ecommerce\DownloadSyncProductsApp\DownloadSyncProducts\SyncProducts\Data\DataProvider.cs:line 23
+
+SOURCE
+System.Data
+
+TARGET NAME
+ValidateCommand
+
+TARGET MODULE NAME
+System.Data.dll
+
+Failed to ExecuteQuery: select * from product
+----------------------------------------------------------------------------------
+12/17/2016 22:15:46 - Alex
+EXECUTEREADER: CONNECTION PROPERTY HAS NOT BEEN INITIALIZED.
+INNER EXCEPTION
+
+
+STACK TRACE
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at SyncProducts.Data.DataProvider.GetReader(String sql, Result& result) in C:\projects\Ecommerce\DownloadSyncProductsApp\DownloadSyncProducts\SyncProducts\Data\DataProvider.cs:line 23
+
+SOURCE
+System.Data
+
+TARGET NAME
+ValidateCommand
+
+TARGET MODULE NAME
+System.Data.dll
+
+Failed to ExecuteQuery: select * from product
+----------------------------------------------------------------------------------
+12/17/2016 22:24:58 - Alex
+EXECUTEREADER REQUIRES AN OPEN AND AVAILABLE CONNECTION. THE CONNECTION'S CURRENT STATE IS CLOSED.
+INNER EXCEPTION
+
+
+STACK TRACE
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at SyncProducts.Data.DataProvider.GetReader(String sql, Result& result) in C:\projects\Ecommerce\DownloadSyncProductsApp\DownloadSyncProducts\SyncProducts\Data\DataProvider.cs:line 23
+
+SOURCE
+System.Data
+
+TARGET NAME
+ValidateCommand
+
+TARGET MODULE NAME
+System.Data.dll
+
+Failed to ExecuteQuery: select * from product

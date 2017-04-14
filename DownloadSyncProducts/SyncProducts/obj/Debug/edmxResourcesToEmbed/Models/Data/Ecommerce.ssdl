@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EcommerceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ItemNum" />
+    </Key>
+    <Property Name="ItemNum" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="300" />
+    <Property Name="ProductDescription" Type="text" />
+    <Property Name="ProductDescriptionOrignalHtml" Type="text" />
+    <Property Name="Brand" Type="nvarchar" MaxLength="50" />
+    <Property Name="Category1" Type="nvarchar" MaxLength="100" />
+    <Property Name="Category2" Type="nvarchar" MaxLength="100" />
+    <Property Name="Category3" Type="nvarchar" MaxLength="100" />
+    <Property Name="Category4" Type="nvarchar" MaxLength="100" />
+    <Property Name="RetailPrice" Type="money" />
+    <Property Name="WholesalePriceBeforeMarkup" Type="money" />
+    <Property Name="MAPPrice" Type="money" />
+    <Property Name="SupplierHandlingFee" Type="money" />
+    <Property Name="Weight" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="QtyInStock" Type="int" />
+    <Property Name="InStock" Type="bit" />
+    <Property Name="UPC" Type="bigint" />
+    <Property Name="ImageName" Type="nvarchar" MaxLength="250" />
+    <Property Name="URLToLargeImage" Type="nvarchar" MaxLength="250" />
+    <Property Name="URLToThumbImage" Type="nvarchar" MaxLength="250" />
+    <Property Name="RefurbishedFlag" Type="bit" />
+    <Property Name="AttributeList" Type="nvarchar" MaxLength="500" />
+    <Property Name="ShippingForUSA" Type="money" />
+    <Property Name="ManufacturerProdId" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShippingLength" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="ShippingWidth" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="ShippingHeight" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="SalesTaxPct" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="SalesTaxState" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Manufacturer" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShippingForCanada" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="ShippingForInternational" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="W2bHandlingFee" Type="money" />
+    <Property Name="W2B3PctTransactionFeeUSA" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="W2B3PctTransactionFeeCanada" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="W2B3PctTransactionFeeInternational" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="USAZONE" Type="money" />
+    <Property Name="CANADAZONE" Type="money" />
+    <Property Name="Attributes" Type="nvarchar" MaxLength="500" />
+    <Property Name="ExtraImg1" Type="nvarchar" MaxLength="500" />
+    <Property Name="ExtraImg2" Type="nvarchar" MaxLength="500" />
+    <Property Name="ExtraImg3" Type="nvarchar" MaxLength="500" />
+    <Property Name="ExtraImg4" Type="nvarchar" MaxLength="500" />
+    <Property Name="ExtraImg5" Type="nvarchar" MaxLength="500" />
+    <Property Name="ExtraImg6" Type="nvarchar" MaxLength="500" />
+    <Property Name="DescriptionNoHtml" Type="text" />
+    <Property Name="SupplierNameItemNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="SupplierCategory1" Type="nvarchar" MaxLength="50" />
+    <Property Name="SupplierCategory2" Type="nvarchar" MaxLength="50" />
+    <Property Name="SupplierCategory3" Type="nvarchar" MaxLength="50" />
+    <Property Name="SupplierCategory4" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Website">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Abbrev" Type="nvarchar" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WebsiteProduct">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WebsiteId" Type="int" Nullable="false" />
+    <Property Name="ProductId" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <Association Name="fk_WebsiteProduct_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="WebsiteProduct" Type="Self.WebsiteProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ItemNum" />
+      </Principal>
+      <Dependent Role="WebsiteProduct">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_WebsiteProduct_Website">
+    <End Role="Website" Type="Self.Website" Multiplicity="1" />
+    <End Role="WebsiteProduct" Type="Self.WebsiteProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Website">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="WebsiteProduct">
+        <PropertyRef Name="WebsiteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EcommerceModelStoreContainer">
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Website" EntityType="Self.Website" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WebsiteProduct" EntityType="Self.WebsiteProduct" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="fk_WebsiteProduct_Product" Association="Self.fk_WebsiteProduct_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="WebsiteProduct" EntitySet="WebsiteProduct" />
+    </AssociationSet>
+    <AssociationSet Name="fk_WebsiteProduct_Website" Association="Self.fk_WebsiteProduct_Website">
+      <End Role="Website" EntitySet="Website" />
+      <End Role="WebsiteProduct" EntitySet="WebsiteProduct" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
