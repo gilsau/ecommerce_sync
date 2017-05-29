@@ -68,6 +68,7 @@ namespace SyncProducts.Helpers
                 prod.SupplierCategory2 = dr[49].ToString();
                 prod.SupplierCategory3 = dr[50].ToString();
                 prod.SupplierCategory4 = dr[51].ToString();
+                prod.CatMember = bool.Parse((dr[52].ToString() == "0" ? "false" : "true"));
 
                 prods.Add(prod);
             }

@@ -23,15 +23,69 @@ namespace SyncProducts.Controllers
     {
         public ActionResult Index()
         {
-            List<Website> webs = DataRepository.GetWebsites();
-            return View(webs);
+            ViewBag.Websites = DataRepository.GetWebsites();
+            ViewBag.Categories = DataRepository.GetLocalCategories();
+            return View();
+        }
+
+        [HttpPost]
+        public JsonResult GetProducts(GetProductsByCategoryModel model)
+        {
+            model.SupplierCategoryPath = HttpUtility.UrlDecode(model.SupplierCategoryPath);
+
+            List<Product> prods = DataRepository.GetProductsByCategory(model);
+
+            var result = Json(prods, JsonRequestBehavior.AllowGet);
+            result.MaxJsonLength = int.MaxValue;
+
+            return result;
+        }
+
+        [HttpPost]
+        public JsonResult GetSiteCategories(GetSiteCategoriesModel model)
+        {
+            List<SiteCategoryModel> cats = DataRepository.GetSiteCategories(model.WebsiteId, model.SupplierCategoryPath);
+            return Json(cats, JsonRequestBehavior.AllowGet);
         }
 
         [HttpGet]
-        public JsonResult GetProducts(Category cat)
+        public JsonResult RemoveSiteCategory(SiteCategoryModel model)
         {
-            List<Product> prods = DataRepository.GetLocalProducts(cat);
-            return Json(prods, JsonRequestBehavior.AllowGet);
+            Result result = new Result();
+            DataRepository.RemoveSiteCategory(model.WebCatId, out result);
+
+            if (result.Success)
+            {
+                return GetSiteCategories(new GetSiteCategoriesModel()
+                {
+                    WebsiteId = model.WebsiteId,
+                    SupplierCategoryPath = model.SupplierCategoryPath
+                });
+            }
+            else
+            {
+                return Json(new List<SiteCategoryModel>(), JsonRequestBehavior.AllowGet);
+            }
+        }
+
+        [HttpPost]
+        public JsonResult AddSiteCategory(SiteCategoryModel model)
+        {
+            model.SupplierCategoryPath = HttpUtility.UrlDecode(model.SupplierCategoryPath);
+
+            Result result = new Result();
+            DataRepository.AddSiteCategory(model, out result);
+
+            if (result.Success)
+            {
+                return GetSiteCategories(new GetSiteCategoriesModel() {
+                    WebsiteId = model.WebsiteId,
+                    SupplierCategoryPath = model.SupplierCategoryPath
+                });
+            }
+            else {
+                return Json(new List<SiteCategoryModel>(), JsonRequestBehavior.AllowGet);
+            }
         }
 
         [HttpGet]
@@ -42,15 +96,12 @@ namespace SyncProducts.Controllers
         }
 
         [HttpPost]
-        public JsonResult UpdateWebMemsAndProdCounts(List<WebsiteMembership> webMems) {
+        public JsonResult SaveProducts(SaveProductsModel model)
+        {
+            Result result = new Result();
+            DataRepository.SaveProducts(model, out result);
 
-            //apply memberships to sites
-            List<int> siteIds = webMems.Select(s => s.WebId).Distinct().ToList();
-            foreach (int s in siteIds) {
-                DataRepository.UpdateSiteMemberships(s, webMems.Where(sm => sm.WebId == s && sm.IsMember).ToList());
-            }
-
-            return GetCats();
+            return Json(result);
         }
 
         [HttpGet]

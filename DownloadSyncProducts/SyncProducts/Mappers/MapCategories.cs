@@ -15,23 +15,28 @@ namespace SyncProducts.Helpers
             foreach(DataRow dr in dt.Rows)
             {
                 Category cat = new Category();
-                cat.RowNum = int.Parse(dr[0].ToString());
-                cat.Category1 = dr[2].ToString();
-                cat.Category2 = dr[3].ToString();
-                cat.Category3 = dr[4].ToString();
-                cat.ProductCount = int.Parse(dr[5].ToString());
-
-                //add website memberships
-                cat.WebMemberships = new List<WebsiteMembership>();
-                foreach (string webInfo in dr[1].ToString().Split(','))
-                {
-                    string[] arrWebMem = webInfo.Split('|');
-                    cat.WebMemberships.Add(new WebsiteMembership() { WebId = int.Parse(arrWebMem[0]), IsMember = bool.Parse(arrWebMem[1]), ProductCount = int.Parse(arrWebMem[2]), ProductsUrl = arrWebMem[3], Category1 = cat.Category1, Category2 = cat.Category2, Category3 = cat.Category3, });
-                }
-
+                cat.FullPath = dr[0].ToString();
+                cat.ProductCount = int.Parse(dr[1].ToString());
                 cats.Add(cat);
             }
             
+            return cats;
+        }
+
+        public static List<SiteCategoryModel> MapDBToSiteCategoryList(DataTable dt)
+        {
+            List<SiteCategoryModel> cats = new List<SiteCategoryModel>();
+            foreach (DataRow dr in dt.Rows)
+            {
+                SiteCategoryModel cat = new SiteCategoryModel();
+                cat.WebCatId = int.Parse(dr[0].ToString());
+                cat.WebsiteId = int.Parse(dr[1].ToString());
+                cat.SupplierCategoryPath = dr[2].ToString();
+                cat.SiteCategoryPath = dr[3].ToString();
+                cat.SiteCategoryFilter = dr[4].ToString();
+                cats.Add(cat);
+            }
+
             return cats;
         }
     }

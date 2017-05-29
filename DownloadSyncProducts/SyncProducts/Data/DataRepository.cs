@@ -20,24 +20,89 @@ namespace SyncProducts.Data
             return webs;
         }
 
-        public static List<Product> GetLocalProducts(Category cat)
+        public static List<SiteCategoryModel> GetSiteCategories(int websiteId, string supplierCategory)
         {
             Result result = new Result();
+            DataProvider.GetDataTable(ConfigurationManager.ConnectionStrings["MainConnStr"].ConnectionString, string.Format("select * from WebXSuppCatXSiteCat where WebsiteId={0} and SupplierCategoryPath='{1}'", websiteId, supplierCategory), out result);
+            List<SiteCategoryModel> siteCats = MapCategories.MapDBToSiteCategoryList((DataTable)result.ReturnObj);
 
-            //TODO: add WEBSITES in select list
-            string sql = string.Format("select ROW_NUMBER() over (order by Category1, Category2, Category3) as RowNum, * from productimport where category1 = '{0}' and category2 = '{1}' and category3 = '{2}' order by Category1, Category2, Category3", cat.Category1, cat.Category2, cat.Category3);
+            return siteCats;
+        }
+
+        public static void RemoveSiteCategory(int WebCatId, out Result result)
+        {
+            result = new Result();
+
+            StringBuilder sbSQL = new StringBuilder();
+            sbSQL.Append(string.Format("delete WebXSuppCatXSiteCat where Id={0};delete CatXProduct where webCatId={0};", WebCatId));
+
+            DataProvider.ExecuteQuery(ConfigurationManager.ConnectionStrings["MainConnStr"].ConnectionString, sbSQL.ToString(), false, out result);
+        }
+
+        public static void AddSiteCategory(SiteCategoryModel model, out Result result) {
+            result = new Result();
+
+            //save website/supplier category/site category combo, and get id for combo
+            StringBuilder sbSQL = new StringBuilder();
+            sbSQL.Append(string.Format("insert into WebXSuppCatXSiteCat values({0},'{1}','{2}','{3}'); select @@identity;", model.WebsiteId, model.SupplierCategoryPath, model.SiteCategoryPath, model.SiteCategoryFilter));
+            
+            DataProvider.ExecuteQuery(ConfigurationManager.ConnectionStrings["MainConnStr"].ConnectionString, sbSQL.ToString(), true, out result);
+        }
+
+        public static void UpdateSiteCategory(SiteCategoryModel model, out Result result)
+        {
+            result = new Result();
+
+            //save website/supplier category/site category combo, and get id for combo
+            StringBuilder sbSQL = new StringBuilder();
+            sbSQL.Append(string.Format("update WebXSuppCatXSiteCat set SiteCategoryPath='{0}', SiteCategoryFilter='{1}' where Id={2}; select '{2}';", model.SiteCategoryPath, model.SiteCategoryFilter, model.WebCatId));
+
+            DataProvider.ExecuteQuery(ConfigurationManager.ConnectionStrings["MainConnStr"].ConnectionString, sbSQL.ToString(), true, out result);
+        }
+
+        public static void SaveProducts(SaveProductsModel model, out Result result) {
+            result = new Result();
+
+            UpdateSiteCategory(new SiteCategoryModel() {
+                WebCatId=model.WebCatId,
+                WebsiteId=model.WebsiteId,
+                SupplierCategoryPath=model.SupplierCategory,
+                SiteCategoryPath=model.SiteCategoryPath,
+                SiteCategoryFilter=model.SiteCategoryFilter
+            }, out result);
+            
+            //add products
+            if (result.Success)
+            {
+                int webCatId = int.Parse(result.ReturnObj.ToString());
+                result = new Result();
+
+                StringBuilder sbSQL = new StringBuilder(string.Format("delete CatXProduct where WebCatId={0};", webCatId));
+                foreach (string prodId in model.Products)
+                {
+                    sbSQL.Append(string.Format(" if not exists(select 1 from CatXProduct where WebCatId={0} and ProductId='{1}') begin insert into CatXProduct values({0}, '{1}'); end ", webCatId, prodId));
+                }
+
+                DataProvider.ExecuteQuery(ConfigurationManager.ConnectionStrings["MainConnStr"].ConnectionString, sbSQL.ToString(), false, out result);
+            }
+        }
+
+        public static List<Product> GetProductsByCategory(GetProductsByCategoryModel model)
+        {
+            Result result = new Result();
+            string[] suppCatArr = model.SupplierCategoryPath.Split('~');
+            string sql = string.Format("select row_number() over(order by pi.productName) as RowNum, pi.*, CatMember=(case when wc.Id is null then 0 else 1 end) from productImport pi left join CatXProduct cp on cp.ProductId = pi.ItemNum left join WebXSuppCatXSiteCat wc on wc.Id = cp.WebCatId and wc.WebsiteId={0} and wc.SupplierCategoryPath='{1}' and wc.SiteCategoryPath='{2}' and wc.SiteCategoryFilter='{3}' where category1='{4}' and category2='{5}' and category3='{6}' ", model.WebsiteId, model.SupplierCategoryPath, model.SiteCategoryPath, model.SiteCategoryFilter, suppCatArr[0].Trim(), suppCatArr[1].Trim(), suppCatArr[2].Trim(), model.WebsiteId);
 
             DataProvider.GetDataTable(ConfigurationManager.ConnectionStrings["MainConnStr"].ConnectionString, sql, out result);
             List<Product> prods = MapProducts.MapDBToProdList((DataTable)result.ReturnObj);
-
+            
             return prods;
         }
 
         public static List<Category> GetLocalCategories() {
             Result result = new Result();
 
-            //TODO: add WEBSITES in select list
-            string sql = "select ROW_NUMBER() over (order by Category1, Category2, Category3) as RowNum, Websites='1|true|300|http://www.funmodernelectronics.com,2|false|500|http://www.hisandherscloset.com,3|true|700|http://www.homeandgardenstatues.com,4|false|900|http://www.outdoorsfungear.com,5|true|1100|http://www.toysandgamesroom.com', Category1, Category2, Category3, Products=COUNT(productname) from productimport where ltrim(rtrim(suppliercategory1)) <> '' group by Category1, Category2, Category3 order by Category1, Category2, Category3 ";
+            string sql = "select FullPath=Category1 + ' ~ ' + Category2 + ' ~ ' + Category3, ProductCount=count(ItemNum) from ProductImport where ltrim(rtrim(Category1))<>'' group by Category1, Category2, Category3 order by Category1, Category2, Category3";
 
             DataProvider.GetDataTable(ConfigurationManager.ConnectionStrings["MainConnStr"].ConnectionString, sql, out result);
             List<Category> cats = MapCategories.MapDBToCatList((DataTable)result.ReturnObj);

@@ -5,6 +5,22 @@ using System.Web;
 
 namespace SyncProducts.Models
 {
+    public class SaveProductsModel {
+        public int WebCatId { get; set; }
+        public int WebsiteId { get; set; }
+        public string SupplierCategory { get; set; }
+        public string SiteCategoryPath { get; set; }
+        public string SiteCategoryFilter { get; set; }
+        public List<string> Products { get; set; }
+    }
+
+    public class SiteCategoryProducts
+    {
+        public string SiteCategory { get; set; }
+        public string SiteCategoryFilter { get; set; }
+        public List<string> Products { get; set; }
+    }
+
     public class Product
     {
         public int RowNum { get; set; }
@@ -59,5 +75,6 @@ namespace SyncProducts.Models
         public string SupplierCategory2 { get; set; }
         public string SupplierCategory3 { get; set; }
         public string SupplierCategory4 { get; set; }
+        public bool CatMember { get; set; }
     }
 }

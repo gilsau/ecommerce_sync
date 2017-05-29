@@ -45,10 +45,17 @@ function TruncateProductImportTable() {
 }
 
 function SaveFile(fileIndex) {
+
+    console.log('filePaths');
+    console.log(filePaths);
+    console.log('');
+
     var path = $(filePaths[fileIndex]).text();
 
     console.log('Path: ' + path);
     console.log('FileIndex: ' + fileIndex);
+
+    
 
     $.ajax({
         method: "GET",
@@ -57,6 +64,7 @@ function SaveFile(fileIndex) {
     })
     .done(function (data) {
         if (data.ErrForUser != null) {
+            console.log('data.ErrForUser: ' + data.ErrForUser);
             $('#pnlDwn2').html(data.ErrForUser + $('#pnlDwn2').html());
         }
         ShowProgress($('#spanSaveFilesProg'), 2);

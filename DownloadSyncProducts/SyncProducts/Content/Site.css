@@ -7,6 +7,10 @@
     word-wrap: break-word;
 }
 
+.marg10 {
+    margin: 0px 10px 0px 10px;
+}
+
 .nomarg {
     margin: 0px;
 }
@@ -16,7 +20,11 @@
 }
 
 .pad5 {
-    padding: 1px;
+    padding: 5px;
+}
+
+.pad25 {
+    padding: 25px;
 }
 
 div .scroll {
@@ -81,3 +89,31 @@ th.va-middle {
 #catTable tr th, #catTable tr td {
     padding: 0px 5px 0px 5px;
 }
+
+.thinText1 {
+    font-size: 12px;
+}
+
+.boxHighlight {
+    background-color: #e1ffff;
+}
+
+div.prodBoxTitle {
+    background-color: #e1ffff;
+    color: #000;
+    text-align: center;
+    padding: 2px;
+    border-bottom: solid 3px #fff;
+}
+
+div.prodBox {
+    width: 200px;
+    display: inline-block;
+    border: solid 2px #e1ffff;
+    padding: 0px;
+    margin: 15px;
+}
+
+    div.prodBox:hover {
+        background-color: #e1ffff;
+    }

@@ -7,17 +7,29 @@ namespace SyncProducts.Models
 {
     public class Category
     {
-        public int RowNum { get; set; }
-        public List<WebsiteMembership> WebMemberships { get; set; }
-        public string Category1 { get; set; }
-        public string Category2 { get; set; }
-        public string Category3 { get; set; }
+        public string FullPath { get; set; }
         public int ProductCount { get; set; }
     }
 
-    public class SiteCategory {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public int ParentCategoryId { get; set; }
+    public class GetProductsByCategoryModel
+    {
+        public int WebsiteId { get; set; }
+        public string SupplierCategoryPath { get; set; }
+        public string SiteCategoryPath { get; set; }
+        public string SiteCategoryFilter { get; set; }
+    }
+
+    public class GetSiteCategoriesModel {
+        public int WebsiteId { get; set; }
+        public string SupplierCategoryPath { get; set; }
+    }
+
+    public class SiteCategoryModel
+    {
+        public int WebCatId { get; set; }
+        public int WebsiteId { get; set; }
+        public string SupplierCategoryPath { get; set; }
+        public string SiteCategoryPath { get; set; }
+        public string SiteCategoryFilter { get; set; }
     }
 }
