@@ -1,0 +1,55 @@
+----------------------------------------------------------------------------------
+08/31/2017 16:24:15 - Admin
+EXECUTENONQUERY: COMMANDTEXT PROPERTY HAS NOT BEEN INITIALIZED
+INNER EXCEPTION
+
+
+STACK TRACE
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at EcommerceManager.Data.DataProvider.ExecuteQuery(String sConn, String sql, Boolean isScalar, Result& result) in C:\projects\ecommerce_sync\DownloadEcommerceManager\EcommerceManager\Data\DataProvider.cs:line 65
+
+SOURCE
+System.Data
+
+TARGET NAME
+ValidateCommand
+
+TARGET MODULE NAME
+System.Data.dll
+
+Failed to ExecuteQuery: 
+----------------------------------------------------------------------------------
+08/31/2017 16:24:19 - Admin
+INCORRECT SYNTAX NEAR 'GO'.
+INCORRECT SYNTAX NEAR 'GO'.
+INCORRECT SYNTAX NEAR 'GO'.
+INCORRECT SYNTAX NEAR 'GO'.
+INCORRECT SYNTAX NEAR 'GO'.
+INCORRECT SYNTAX NEAR 'GO'.
+INCORRECT SYNTAX NEAR 'GO'.
+INCORRECT SYNTAX NEAR 'GO'.
+INNER EXCEPTION
+
+
+STACK TRACE
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at EcommerceManager.Data.DataProvider.ExecuteQuery(String sConn, String sql, Boolean isScalar, Result& result) in C:\projects\ecommerce_sync\DownloadEcommerceManager\EcommerceManager\Data\DataProvider.cs:line 65
+
+SOURCE
+.Net SqlClient Data Provider
+
+TARGET NAME
+OnError
+
+TARGET MODULE NAME
+System.Data.dll
+
+Failed to ExecuteQuery:  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='1784') and pictureid=814) begin insert into Product_Picture_Mapping values((select id from product where sku = '1784'), 814, 1); end go  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='ANKL0504B012X') and pictureid=815) begin insert into Product_Picture_Mapping values((select id from product where sku = 'ANKL0504B012X'), 815, 1); end go  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='ANKL0504B017X') and pictureid=816) begin insert into Product_Picture_Mapping values((select id from product where sku = 'ANKL0504B017X'), 816, 1); end go  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='ANKL0521B202X') and pictureid=817) begin insert into Product_Picture_Mapping values((select id from product where sku = 'ANKL0521B202X'), 817, 1); end go  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='ANKL0608B416X') and pictureid=818) begin insert into Product_Picture_Mapping values((select id from product where sku = 'ANKL0608B416X'), 818, 1); end go  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='ANKL0716B227X') and pictureid=819) begin insert into Product_Picture_Mapping values((select id from product where sku = 'ANKL0716B227X'), 819, 1); end go  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='AX0106') and pictureid=820) begin insert into Product_Picture_Mapping values((select id from product where sku = 'AX0106'), 820, 1); end go  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='AXA748') and pictureid=821) begin insert into Product_Picture_Mapping values((select id from product where sku = 'AXA748'), 821, 1); end go 

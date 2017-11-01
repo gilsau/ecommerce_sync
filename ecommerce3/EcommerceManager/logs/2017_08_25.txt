@@ -1,0 +1,291 @@
+----------------------------------------------------------------------------------
+08/25/2017 16:54:28 - Admin
+THE GIVEN VALUE OF TYPE STRING FROM THE DATA SOURCE CANNOT BE CONVERTED TO TYPE NVARCHAR OF THE SPECIFIED TARGET COLUMN.
+INNER EXCEPTION
+String or binary data would be truncated.
+
+STACK TRACE
+   at System.Data.SqlClient.SqlBulkCopy.ConvertValue(Object value, _SqlMetaData metadata, Boolean isNull, Boolean& isSqlType, Boolean& coercedToDataFeed)
+   at System.Data.SqlClient.SqlBulkCopy.ReadWriteColumnValueAsync(Int32 col)
+   at System.Data.SqlClient.SqlBulkCopy.CopyColumnsAsync(Int32 col, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyRowsAsync(Int32 rowsSoFar, Int32 totalRows, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyBatchesAsyncContinued(BulkCopySimpleResultSet internalResults, String updateBulkCommandText, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyBatchesAsync(BulkCopySimpleResultSet internalResults, String updateBulkCommandText, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalRestContinuedAsync(BulkCopySimpleResultSet internalResults, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalRestAsync(CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalAsync(CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table)
+   at EcommerceManager.Data.DataRepository.ImportFileToDB(String filePath, Result& result) in C:\projects\ecommerce_sync\DownloadEcommerceManager\EcommerceManager\Data\DataRepository.cs:line 88
+
+SOURCE
+System.Data
+
+TARGET NAME
+ConvertValue
+
+TARGET MODULE NAME
+System.Data.dll
+
+Failed to import ALL DATA from file: C:\projects\ecommerce_sync\DownloadEcommerceManager\EcommerceManager\downloadedfiles\products\2017_08_24_09_58_32_922_logo-diecastdropshipper.csv, but was able to import 0 of 4264<br/><b>ERROR: The given value of type String from the data source cannot be converted to type nvarchar of the specified target column.</b><hr/>
+----------------------------------------------------------------------------------
+08/25/2017 16:56:24 - Admin
+THE GIVEN VALUE OF TYPE STRING FROM THE DATA SOURCE CANNOT BE CONVERTED TO TYPE NVARCHAR OF THE SPECIFIED TARGET COLUMN.
+INNER EXCEPTION
+String or binary data would be truncated.
+
+STACK TRACE
+   at System.Data.SqlClient.SqlBulkCopy.ConvertValue(Object value, _SqlMetaData metadata, Boolean isNull, Boolean& isSqlType, Boolean& coercedToDataFeed)
+   at System.Data.SqlClient.SqlBulkCopy.ReadWriteColumnValueAsync(Int32 col)
+   at System.Data.SqlClient.SqlBulkCopy.CopyColumnsAsync(Int32 col, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyRowsAsync(Int32 rowsSoFar, Int32 totalRows, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyBatchesAsyncContinued(BulkCopySimpleResultSet internalResults, String updateBulkCommandText, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyBatchesAsync(BulkCopySimpleResultSet internalResults, String updateBulkCommandText, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalRestContinuedAsync(BulkCopySimpleResultSet internalResults, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalRestAsync(CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalAsync(CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table)
+   at EcommerceManager.Data.DataRepository.ImportFileToDB(String filePath, Result& result) in C:\projects\ecommerce_sync\DownloadEcommerceManager\EcommerceManager\Data\DataRepository.cs:line 88
+
+SOURCE
+System.Data
+
+TARGET NAME
+ConvertValue
+
+TARGET MODULE NAME
+System.Data.dll
+
+Failed to import ALL DATA from file: C:\projects\ecommerce_sync\DownloadEcommerceManager\EcommerceManager\downloadedfiles\products\2017_08_24_09_58_56_266_logo-savedollarstores.csv, but was able to import 0 of 5943<br/><b>ERROR: The given value of type String from the data source cannot be converted to type nvarchar of the specified target column.</b><hr/>
+----------------------------------------------------------------------------------
+08/25/2017 17:04:48 - Admin
+THE GIVEN VALUE OF TYPE STRING FROM THE DATA SOURCE CANNOT BE CONVERTED TO TYPE NVARCHAR OF THE SPECIFIED TARGET COLUMN.
+INNER EXCEPTION
+String or binary data would be truncated.
+
+STACK TRACE
+   at System.Data.SqlClient.SqlBulkCopy.ConvertValue(Object value, _SqlMetaData metadata, Boolean isNull, Boolean& isSqlType, Boolean& coercedToDataFeed)
+   at System.Data.SqlClient.SqlBulkCopy.ReadWriteColumnValueAsync(Int32 col)
+   at System.Data.SqlClient.SqlBulkCopy.CopyColumnsAsync(Int32 col, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyRowsAsync(Int32 rowsSoFar, Int32 totalRows, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyBatchesAsyncContinued(BulkCopySimpleResultSet internalResults, String updateBulkCommandText, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyBatchesAsync(BulkCopySimpleResultSet internalResults, String updateBulkCommandText, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalRestContinuedAsync(BulkCopySimpleResultSet internalResults, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalRestAsync(CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalAsync(CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table)
+   at EcommerceManager.Data.DataRepository.ImportFileToDB(String filePath, Result& result) in C:\projects\ecommerce_sync\DownloadEcommerceManager\EcommerceManager\Data\DataRepository.cs:line 88
+
+SOURCE
+System.Data
+
+TARGET NAME
+ConvertValue
+
+TARGET MODULE NAME
+System.Data.dll
+
+Failed to import ALL DATA from file: C:\projects\ecommerce_sync\DownloadEcommerceManager\EcommerceManager\downloadedfiles\products\2017_08_24_10_00_23_947_dwtdcd790d2.csv, but was able to import 25000 of 40642<br/><b>ERROR: The given value of type String from the data source cannot be converted to type nvarchar of the specified target column.</b><hr/>
+----------------------------------------------------------------------------------
+08/25/2017 17:08:11 - Admin
+EXECUTION TIMEOUT EXPIRED.  THE TIMEOUT PERIOD ELAPSED PRIOR TO COMPLETION OF THE OPERATION OR THE SERVER IS NOT RESPONDING.
+INNER EXCEPTION
+The wait operation timed out
+
+STACK TRACE
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at EcommerceManager.Data.DataProvider.ExecuteQuery(String sConn, String sql, Boolean isScalar, Result& result) in C:\projects\ecommerce_sync\DownloadEcommerceManager\EcommerceManager\Data\DataProvider.cs:line 63
+
+SOURCE
+.Net SqlClient Data Provider
+
+TARGET NAME
+OnError
+
+TARGET MODULE NAME
+System.Data.dll
+
+Failed to ExecuteQuery: insert into ProductImport select pi1.ItemNum, pi1.[Name], [Description] = convert(nvarchar(1000), SUBSTRING(pi2.ProductDescriptionOriginalHtml, 1, 1000)), Wholesale = cast(pi2.WholesalePriceBeforeMarkup as money), Retail = cast(pi2.RetailPrice as money), Qty = cast(pi2.QtyInStock as int), ImageUrl = pi2.URLToLargeImage,[Length] = iif(ISNUMERIC(pi2.shippinglength) = 1, cast(pi2.shippinglength as decimal), 0), Height = iif(ISNUMERIC(pi2.shippingheight) = 1, cast(pi2.shippingheight as decimal), 0), Width = iif(ISNUMERIC(pi2.shippingwidth) = 1, cast(pi2.shippingwidth as decimal), 0),[Weight] = iif(ISNUMERIC(pi2.[Weight]) = 1, cast(pi2.[Weight] as decimal), 0), Category1 = SUBSTRING(pi2.category1, 1, 100), Category2 = SUBSTRING(pi2.category2, 1, 100), Category3 = SUBSTRING(pi2.category3, 1, 100) from(select ItemNum,[Name] = SUBSTRING(min(ProductName), 1, 100) from ProductImportPre where ltrim(rtrim(ItemNum)) <> '' and ltrim(rtrim(ProductName)) <> '' and isnumeric(WholesalePriceBeforeMarkup) = 1 and ISNUMERIC(RetailPrice) = 1 and ltrim(rtrim(Category1)) <> '' group by ItemNum) as pi1 inner join(select ItemNum, [Name] = ProductName, ProductDescriptionOriginalHtml, WholesalePriceBeforeMarkup, RetailPrice, QtyInStock, URLToLargeImage, ShippingLength, ShippingHeight, ShippingWidth, [Weight], Category1, Category2, Category3 from ProductImportPre) as pi2 on pi2.ItemNum = pi1.ItemNum and pi2.[Name] = pi1.[Name] order by pi1.ItemNum
+----------------------------------------------------------------------------------
+08/25/2017 17:08:25 - Admin
+THERE IS ALREADY AN OBJECT NAMED 'CATEGORIES' IN THE DATABASE.
+INNER EXCEPTION
+
+
+STACK TRACE
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at EcommerceManager.Data.DataProvider.ExecuteQuery(String sConn, String sql, Boolean isScalar, Result& result) in C:\projects\ecommerce_sync\DownloadEcommerceManager\EcommerceManager\Data\DataProvider.cs:line 63
+
+SOURCE
+.Net SqlClient Data Provider
+
+TARGET NAME
+OnError
+
+TARGET MODULE NAME
+System.Data.dll
+
+Failed to ExecuteQuery: if exists(select 1 from INFORMATION_SCHEMA.TABLES where TABLE_NAME='') begin drop table categories; end select FullPath = Category1 + ' ~ ' + Category2 + ' ~ ' + Category3, ProductCount = count(ItemNum) into Categories from ProductImportPre where ltrim(rtrim(Category1)) <> '' group by Category1, Category2, Category3
+----------------------------------------------------------------------------------
+08/25/2017 17:45:24 - Admin
+THERE IS ALREADY AN OBJECT NAMED 'CATEGORIES' IN THE DATABASE.
+INNER EXCEPTION
+
+
+STACK TRACE
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at EcommerceManager.Data.DataProvider.ExecuteQuery(String sConn, String sql, Boolean isScalar, Result& result) in C:\projects\ecommerce_sync\DownloadEcommerceManager\EcommerceManager\Data\DataProvider.cs:line 65
+
+SOURCE
+.Net SqlClient Data Provider
+
+TARGET NAME
+OnError
+
+TARGET MODULE NAME
+System.Data.dll
+
+Failed to ExecuteQuery: if exists(select 1 from INFORMATION_SCHEMA.TABLES where TABLE_NAME='') begin drop table categories; end select FullPath = Category1 + ' ~ ' + Category2 + ' ~ ' + Category3, ProductCount = count(ItemNum) into Categories from ProductImportPre where ltrim(rtrim(Category1)) <> '' group by Category1, Category2, Category3
+----------------------------------------------------------------------------------
+08/25/2017 17:56:52 - Admin
+THE GIVEN VALUE OF TYPE STRING FROM THE DATA SOURCE CANNOT BE CONVERTED TO TYPE NVARCHAR OF THE SPECIFIED TARGET COLUMN.
+INNER EXCEPTION
+String or binary data would be truncated.
+
+STACK TRACE
+   at System.Data.SqlClient.SqlBulkCopy.ConvertValue(Object value, _SqlMetaData metadata, Boolean isNull, Boolean& isSqlType, Boolean& coercedToDataFeed)
+   at System.Data.SqlClient.SqlBulkCopy.ReadWriteColumnValueAsync(Int32 col)
+   at System.Data.SqlClient.SqlBulkCopy.CopyColumnsAsync(Int32 col, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyRowsAsync(Int32 rowsSoFar, Int32 totalRows, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyBatchesAsyncContinued(BulkCopySimpleResultSet internalResults, String updateBulkCommandText, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyBatchesAsync(BulkCopySimpleResultSet internalResults, String updateBulkCommandText, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalRestContinuedAsync(BulkCopySimpleResultSet internalResults, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalRestAsync(CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalAsync(CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table)
+   at EcommerceManager.Data.DataRepository.ImportFileToDB(String filePath, Result& result) in C:\projects\ecommerce_sync\DownloadEcommerceManager\EcommerceManager\Data\DataRepository.cs:line 88
+
+SOURCE
+System.Data
+
+TARGET NAME
+ConvertValue
+
+TARGET MODULE NAME
+System.Data.dll
+
+The given value of type String from the data source cannot be converted to type nvarchar of the specified target column.
+----------------------------------------------------------------------------------
+08/25/2017 17:59:09 - Admin
+THE GIVEN VALUE OF TYPE STRING FROM THE DATA SOURCE CANNOT BE CONVERTED TO TYPE NVARCHAR OF THE SPECIFIED TARGET COLUMN.
+INNER EXCEPTION
+String or binary data would be truncated.
+
+STACK TRACE
+   at System.Data.SqlClient.SqlBulkCopy.ConvertValue(Object value, _SqlMetaData metadata, Boolean isNull, Boolean& isSqlType, Boolean& coercedToDataFeed)
+   at System.Data.SqlClient.SqlBulkCopy.ReadWriteColumnValueAsync(Int32 col)
+   at System.Data.SqlClient.SqlBulkCopy.CopyColumnsAsync(Int32 col, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyRowsAsync(Int32 rowsSoFar, Int32 totalRows, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyBatchesAsyncContinued(BulkCopySimpleResultSet internalResults, String updateBulkCommandText, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyBatchesAsync(BulkCopySimpleResultSet internalResults, String updateBulkCommandText, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalRestContinuedAsync(BulkCopySimpleResultSet internalResults, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalRestAsync(CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalAsync(CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table)
+   at EcommerceManager.Data.DataRepository.ImportFileToDB(String filePath, Result& result) in C:\projects\ecommerce_sync\DownloadEcommerceManager\EcommerceManager\Data\DataRepository.cs:line 88
+
+SOURCE
+System.Data
+
+TARGET NAME
+ConvertValue
+
+TARGET MODULE NAME
+System.Data.dll
+
+The given value of type String from the data source cannot be converted to type nvarchar of the specified target column.
+----------------------------------------------------------------------------------
+08/25/2017 18:07:33 - Admin
+THE GIVEN VALUE OF TYPE STRING FROM THE DATA SOURCE CANNOT BE CONVERTED TO TYPE NVARCHAR OF THE SPECIFIED TARGET COLUMN.
+INNER EXCEPTION
+String or binary data would be truncated.
+
+STACK TRACE
+   at System.Data.SqlClient.SqlBulkCopy.ConvertValue(Object value, _SqlMetaData metadata, Boolean isNull, Boolean& isSqlType, Boolean& coercedToDataFeed)
+   at System.Data.SqlClient.SqlBulkCopy.ReadWriteColumnValueAsync(Int32 col)
+   at System.Data.SqlClient.SqlBulkCopy.CopyColumnsAsync(Int32 col, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyRowsAsync(Int32 rowsSoFar, Int32 totalRows, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyBatchesAsyncContinued(BulkCopySimpleResultSet internalResults, String updateBulkCommandText, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyBatchesAsync(BulkCopySimpleResultSet internalResults, String updateBulkCommandText, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalRestContinuedAsync(BulkCopySimpleResultSet internalResults, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalRestAsync(CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalAsync(CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table)
+   at EcommerceManager.Data.DataRepository.ImportFileToDB(String filePath, Result& result) in C:\projects\ecommerce_sync\DownloadEcommerceManager\EcommerceManager\Data\DataRepository.cs:line 88
+
+SOURCE
+System.Data
+
+TARGET NAME
+ConvertValue
+
+TARGET MODULE NAME
+System.Data.dll
+
+The given value of type String from the data source cannot be converted to type nvarchar of the specified target column.
+----------------------------------------------------------------------------------
+08/25/2017 18:20:53 - Admin
+VIOLATION OF PRIMARY KEY CONSTRAINT 'PK__PRODUCTI__2B2EFFB285914C99'. CANNOT INSERT DUPLICATE KEY IN OBJECT 'DBO.PRODUCTIMPORT'. THE DUPLICATE KEY VALUE IS (01BO188).
+THE STATEMENT HAS BEEN TERMINATED.
+INNER EXCEPTION
+
+
+STACK TRACE
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at EcommerceManager.Data.DataProvider.ExecuteQuery(String sConn, String sql, Boolean isScalar, Result& result) in C:\projects\ecommerce_sync\DownloadEcommerceManager\EcommerceManager\Data\DataProvider.cs:line 65
+
+SOURCE
+.Net SqlClient Data Provider
+
+TARGET NAME
+OnError
+
+TARGET MODULE NAME
+System.Data.dll
+
+Failed to ExecuteQuery: insert into ProductImport select pi1.ItemNum, pi1.[Name], [Description] = convert(nvarchar(1000), SUBSTRING(pi2.ProductDescriptionOriginalHtml, 1, 1000)), Wholesale = cast(pi2.WholesalePriceBeforeMarkup as money), Retail = cast(pi2.RetailPrice as money), Qty = cast(pi2.QtyInStock as int), ImageUrl = pi2.URLToLargeImage,[Length] = iif(ISNUMERIC(pi2.shippinglength) = 1, cast(pi2.shippinglength as decimal), 0), Height = iif(ISNUMERIC(pi2.shippingheight) = 1, cast(pi2.shippingheight as decimal), 0), Width = iif(ISNUMERIC(pi2.shippingwidth) = 1, cast(pi2.shippingwidth as decimal), 0),[Weight] = iif(ISNUMERIC(pi2.[Weight]) = 1, cast(pi2.[Weight] as decimal), 0), Category1 = SUBSTRING(pi2.category1, 1, 100), Category2 = SUBSTRING(pi2.category2, 1, 100), Category3 = SUBSTRING(pi2.category3, 1, 100) from(select ItemNum,[Name] = SUBSTRING(min(ProductName), 1, 100) from ProductImportPre where ltrim(rtrim(ItemNum)) <> '' and ltrim(rtrim(ProductName)) <> '' and isnumeric(WholesalePriceBeforeMarkup) = 1 and ISNUMERIC(RetailPrice) = 1 and ltrim(rtrim(Category1)) <> '' group by ItemNum) as pi1 inner join(select ItemNum, [Name] = ProductName, ProductDescriptionOriginalHtml, WholesalePriceBeforeMarkup, RetailPrice, QtyInStock, URLToLargeImage, ShippingLength, ShippingHeight, ShippingWidth, [Weight], Category1, Category2, Category3 from ProductImportPre) as pi2 on pi2.ItemNum = pi1.ItemNum and pi2.[Name] = pi1.[Name] order by pi1.ItemNum

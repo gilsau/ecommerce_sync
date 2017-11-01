@@ -1,0 +1,102 @@
+﻿@using EcommerceManager.Models;
+@using System.Data;
+@{
+    ViewBag.Title = "Products";
+}
+
+@section Scripts{
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/products.js"></script>
+}
+
+<table class="table nopad nomarg" style="width:100%;">
+    <tr>
+        <td style="width:33%;">
+            <select class="form-control" ng-model="selectedCategory">
+                @foreach (Category cat in ViewBag.Categories)
+                {
+                    <option value="@cat.FullPath">@cat.FullPath (@cat.ProductCount)</option>
+                }
+            </select>
+            <table class="pull-right">
+                <tr>
+                    <td><input id="searchBox" type="text" class="form-control" placeholder="type keyword" ng-model="searchKeyword" /></td>
+                    <td><button class="glyphicon glyphicon-search btn btn-sm btn-primary" ng-click="getProductsByKeyword()"></button></td>
+                </tr>
+            </table>
+        </td>
+        <td style="width:33%;">
+            <select class="form-control" ng-model="selectedWebsite">
+                @foreach (Website web in ViewBag.Websites)
+                {
+                    <option value="@web.Id">@web.Name</option>
+                }
+            </select><br />
+            <div class="container-fluid">
+                <div class="row-fluid" ng-show="selectedWebsite != undefined ">
+                    <div class="col-md-5"><span class="btn btn-md btn-primary form-control" ng-click="pushToSite()">push to site</span></div>
+                    <div class="col-md-1 text-center">AS</div>
+                    <div class="col-md-6"><input type="text" ng-model="siteCategory" class="form-control" /></div>
+                </div>
+            </div>
+        </td>
+        <td style="width:34%;" rowspan="4">
+            <div id="logWindow" class="panel panel-default scroll">
+                <div class="panel-heading">LOG FILE</div>
+                <div id="divLog" class="panel-body" style="word-wrap:break-word;overflow:auto;">
+
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <span ng-click="selectAllProds()" class="btn btn-sm btn-primary pull-left marg10">select all</span>
+            <span ng-click="deselectAllProds()" class="btn btn-sm btn-primary pull-left marg10">de-select all</span>
+            <span style="font-size:20px;"><b class="blue">selected: </b>{{ productsSel.length }}</span>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span style="font-size:20px;"><b class="blue">found: </b>{{ found }}</span>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <table>
+                <tr>
+                    <td>Page Size:</td>
+                    <td><input ng-model="pageSize" type="text" class="form-control" style="width:100px;" placeholder="pagesize" value="1000" /></td>
+                    <td>&nbsp;</td>
+                    <td>Pages:</td> 
+                    <td><select ng-change="goToPage()" ng-options="p for p in pages" ng-model="page" class="form-control"></select></td>
+                    <td><button class="btn btn-sm btn-primary" ng-click="goToPage()">GO</button></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <table class="table table-hover">
+                <tr>
+                    <th>#</th>
+                    <th>SKU/Img</th>
+                    <th>Name</th>
+                    <th class="text-right">Wholesale</th>
+                    <th class="text-right">Retail</th>
+                    <th>Supplier Category</th>
+                    <th>Site Category</th>
+                </tr>
+                <tr ng-click="toggleProdRow($event)"  ng-repeat="p in products" class="prodRow {{ p.CatMember==1 ? 'boxHighlight' : '' }}" data-id="{{ p.ItemNum }}">
+                    <td class="text-left">{{ p.RowNum }}</td>
+                    <td class="text-left">
+                        <div><b>{{ p.ItemNum }}</b></div>
+                        <a target="_blank" href="{{ p.ImageUrl }}"><img ng-src="{{ p.ImageUrl }}" ng-click="toggleProdBox($event)" style="height:50px;" /></a>
+                    </td>
+                    <td class="text-left">{{ p.Name }}</td>
+                    <td class="text-right">{{ p.Wholesale | currency }}</td>
+                    <td class="text-right">{{ p.Retail | currency }}</td>
+                    <td class="text-left">{{ p.Category1 }} - {{ p.Category2 }} - {{ p.Category3 }}</td>
+                    <td class="text-left">{{ p.SiteCategory }}</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>

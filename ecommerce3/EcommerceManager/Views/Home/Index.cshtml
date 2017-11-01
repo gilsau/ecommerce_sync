@@ -1,0 +1,165 @@
+﻿@using EcommerceManager.Models;
+@using System.Data;
+@{
+    ViewBag.Title = "Download";
+
+    Dictionary<string, string> sites = new Dictionary<string, string>();
+    sites.Add("B365", "logo-ahi.png");
+    sites.Add("P892", "logo-air-venturi.png");
+    sites.Add("W290", "logo-allinaudio.png");
+    sites.Add("N630", "logo-allisonavery.png");
+    sites.Add("H558", "logo-azuregreen.png");
+    sites.Add("G240", "logo-bangalla.png");
+    sites.Add("Z591", "logo-bedinabag.png");
+    sites.Add("K940", "logo_brybelly.png");
+    sites.Add("U675", "logo-buy2bee.png");
+    sites.Add("D205", "logo-buy2bee.png");
+    sites.Add("S949", "logo_posterart.jpg");
+    sites.Add("L161", "logo-calicojunodesigns.png");
+    sites.Add("Z157", "logo-caseydistributing.png");
+    sites.Add("B731", "logo-completemedical.png");
+    sites.Add("V940", "logo_cuttingedge.png");
+    sites.Add("A795", "logo_cwrelectronics.jpg");
+    sites.Add("P595", "");
+    sites.Add("F977", "logo-diecastdropshipper.png");
+    sites.Add("L357", "logo-dogostore.png");
+    sites.Add("H899", "logo-dollardays.png");
+    sites.Add("U523", "logo-dpowercase.png");
+    sites.Add("V605", "logo_dropshipdeals.png");
+    sites.Add("X615", "logo_eldorado.png");
+    sites.Add("S921", "logo-electroflip.png");
+    sites.Add("K484", "https://cdnil0.fiverrcdn.com/photos/60672/thumb/2b.jpg?1424419064");
+    sites.Add("Y200", "logo-elegantmoments.jpg");
+    sites.Add("Z858", "logo-ellieshoes.jpg");
+    sites.Add("L270", "logo_fragrancenet.jpg");
+    sites.Add("V728", "logo_fragrancex.jpg");
+    sites.Add("M693", "");
+    sites.Add("M691", "");
+    sites.Add("M694", "");
+    sites.Add("Z120", "logo_gifttree.png");
+    sites.Add("N274", "logo-savedollarstores.png");
+    sites.Add("H154", "logo_greensupply.png");
+    sites.Add("T830", "logo-greyeagletrader.png");
+    sites.Add("Q491", "logo-guardian-servial-gear.jpg");
+    sites.Add("B954", "logo-gworld.png");
+    sites.Add("K132", "logo-honest-green.png");
+    sites.Add("M919", "logo-honeysplace.png");
+    sites.Add("Q385", "logo_hotstuffdropship.jpg");
+    sites.Add("N261", "logo_ifsb2b.jpg");
+    sites.Add("D513", "logo_iisports.png");
+    sites.Add("Q484", "logo-iwgac.png");
+    sites.Add("R599", "logo-jgood.png");
+    sites.Add("Y228", "logo_jboutman.png");
+    sites.Add("L227", "logo-jerrisfashion.gif");
+    sites.Add("K499", "logo-kimmyshop.png");
+    sites.Add("U975", "logo_koleimports.jpg");
+    sites.Add("H784", "logo-kriptotools.png");
+    sites.Add("S514", "logo-leatherskinshop.png");
+    sites.Add("W306", "logo-lovebirdjewelry.png");
+    sites.Add("D970", "logo_megagoods.jpg");
+    sites.Add("C316", "logo-minigadgets.png");
+    sites.Add("S528", "logo-miragepetproducts.png");
+    sites.Add("K218", "logo-monateel.png");
+    sites.Add("M680", "logo-morriscostumes.png");
+    sites.Add("H552", "logo_moteng.jpg");
+    sites.Add("A451", "logo-nalpac.gif");
+    sites.Add("H603", "logo_navarre.jpg");
+    sites.Add("Q575", "logo-newchic.png");
+    sites.Add("V704", "logo-nothingbutdropship.png");
+    sites.Add("L572", "logo-novatechwholesale.png");
+    sites.Add("N270", "logo-oceantailer.png");
+    sites.Add("K450", "logo-olytitle.png");
+    sites.Add("Q634", "logo-ovniwholesale.jpg");
+    sites.Add("R557", "");
+    sites.Add("H371", "https://www.imageserverhost.com/simg/H371/small/S020.jpg");
+    sites.Add("S576", "https://cdnil0.fiverrcdn.com/photos/60672/thumb/2b.jpg?1424419064");
+    sites.Add("R810", "logo_petra.jpg");
+    sites.Add("T161", "logo-petstoresusa.png");
+    sites.Add("P150", "logo-rcjewelry.png");
+    sites.Add("Y985", "logo-RocklineDropship.png");
+    sites.Add("W300", "safety_technology_logo.png");
+    sites.Add("H156", "logo-seawide.jpg");
+    sites.Add("D496", "logo-sextoydistributing.png");
+    sites.Add("D902", "logo-shenmart.png");
+    sites.Add("Z217", "logo-siskiyougifts.png");
+    sites.Add("C902", "logo-spimages.png");
+    sites.Add("M796", "logo-strawberrynet.png");
+    sites.Add("X662", "logo_sunrisewholesalemerchandise.jpg");
+    sites.Add("X935", "logo_synnex.jpg");
+    sites.Add("F484", "logo-tacticalgeardistributors.png");
+    sites.Add("C403", "logo_td.jpg");
+    sites.Add("T398", "https://www.imageserverhost.com/simg/T398/small/DWTDCD790D2.jpg");
+    sites.Add("X167", "logo_topdawg.jpg");
+    sites.Add("Y916", "logo_topdawg.jpg");
+    sites.Add("U213", "trendsgal-logo.gif");
+    sites.Add("M119", "logo-twhlive.png");
+    sites.Add("X585", "logo_veratex.jpg");
+    sites.Add("H366", "logo-vikingwholesale.png");
+    sites.Add("G818", "logo_watchwholesalers.jpg");
+    sites.Add("A816", "logo-whimsicalwatches.png");
+    sites.Add("Q658", "logo-wtspoilers.png");
+    sites.Add("Q232", "logo_wynit.jpg");
+    sites.Add("C187", "logo_wynit.jpg");
+    sites.Add("X278", "logo_xsdepot.jpg");
+    sites.Add("G623", "logo-zanheadgear.jpg");
+}
+
+@section Scripts{
+    <script type="text/javascript" src="~/Scripts/download.js"></script>
+}
+
+
+
+    <h3>DOWNLOAD</h3>
+
+    <div class="row">
+        <div class="col-sm-7">
+            <div id="downloadTop" class="scroll">
+                <table class="table table-striped" style="width:100%;">
+                    <tr>
+                        <th>Company</th>
+                        <th>Products CSV (Zip)</th>
+                    </tr>
+                    
+                    @foreach (KeyValuePair<string, string> site in sites)
+                    {
+                        string logo = site.Value.IndexOf("http") > -1 ? site.Value : string.Format("https://www.wholesale2b.com/logo/{0}", site.Value);
+
+                        <tr>
+                            <td class="logoUrlTD"><img src="@logo" /></td>
+                            <td class="prodUrlTD">https://www.wholesale2b.com/members.php/myaccount/download?download=data&id=&supplier_id=@site.Key&feed_type=free&feed=1&zip=1&token=1b6a9869369ae9eb8f83ea843edb3b2c</td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+            <span id="spanDwnFiles" class="form-control btn btn-primary btn-lg">Download Files From Supplier Urls</span>
+            <div id="spanDwnFilesProg" class="progBar">0%</div>
+        </div>
+        <div class="col-sm-5">
+            <div id="pnlLogTop" class="panel panel-default scroll">
+                <div class="panel-heading">LOG FILE</div>
+                <div id="pnlDwn1" class="panel-body" style="word-wrap:break-word;overflow:auto;"></div>
+            </div>
+        </div>
+    </div>
+    
+    <p>&nbsp;</p>
+    <div class="row">
+        <div class="col-sm-7">
+            <div id="downloadBottom" class="panel panel-default" style="overflow:scroll;margin:0px;">
+                <div class="panel-heading" style="font-weight:bold;">Files Downloaded</div>
+                <div id="pnlFileDownloads" class="panel-body">
+
+                </div>
+            </div>
+            <span id="spanSaveFiles" class="form-control btn btn-primary btn-lg">Save Products In Files To Local Database</span>
+            <div id="spanSaveFilesProg" class="progBar">0%</div>
+        </div>
+        <div class="col-sm-5">
+            <div id="pnlLogBottom" class="panel panel-default scroll">
+                <div class="panel-heading">LOG FILE</div>
+                <div id="pnlDwn2" class="panel-body" style="word-wrap:break-word;overflow:auto;"></div>
+            </div>
+        </div>
+    </div>

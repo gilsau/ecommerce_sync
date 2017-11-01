@@ -1,0 +1,277 @@
+----------------------------------------------------------------------------------
+09/18/2017 01:51:29 - Admin
+THE GIVEN VALUE OF TYPE STRING FROM THE DATA SOURCE CANNOT BE CONVERTED TO TYPE NVARCHAR OF THE SPECIFIED TARGET COLUMN.
+INNER EXCEPTION
+String or binary data would be truncated.
+
+STACK TRACE
+   at System.Data.SqlClient.SqlBulkCopy.ConvertValue(Object value, _SqlMetaData metadata, Boolean isNull, Boolean& isSqlType, Boolean& coercedToDataFeed)
+   at System.Data.SqlClient.SqlBulkCopy.ReadWriteColumnValueAsync(Int32 col)
+   at System.Data.SqlClient.SqlBulkCopy.CopyColumnsAsync(Int32 col, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyRowsAsync(Int32 rowsSoFar, Int32 totalRows, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyBatchesAsyncContinued(BulkCopySimpleResultSet internalResults, String updateBulkCommandText, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyBatchesAsync(BulkCopySimpleResultSet internalResults, String updateBulkCommandText, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalRestContinuedAsync(BulkCopySimpleResultSet internalResults, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalRestAsync(CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalAsync(CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table)
+   at EcommerceManager.Data.DataRepository.ImportFileToDB(String filePath, Result& result) in C:\projects\ecommerce_sync\DownloadEcommerceManager\EcommerceManager\Data\DataRepository.cs:line 296
+
+SOURCE
+System.Data
+
+TARGET NAME
+ConvertValue
+
+TARGET MODULE NAME
+System.Data.dll
+
+The given value of type String from the data source cannot be converted to type nvarchar of the specified target column.
+----------------------------------------------------------------------------------
+09/18/2017 01:59:06 - Admin
+THE GIVEN VALUE OF TYPE STRING FROM THE DATA SOURCE CANNOT BE CONVERTED TO TYPE NVARCHAR OF THE SPECIFIED TARGET COLUMN.
+INNER EXCEPTION
+String or binary data would be truncated.
+
+STACK TRACE
+   at System.Data.SqlClient.SqlBulkCopy.ConvertValue(Object value, _SqlMetaData metadata, Boolean isNull, Boolean& isSqlType, Boolean& coercedToDataFeed)
+   at System.Data.SqlClient.SqlBulkCopy.ReadWriteColumnValueAsync(Int32 col)
+   at System.Data.SqlClient.SqlBulkCopy.CopyColumnsAsync(Int32 col, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyRowsAsync(Int32 rowsSoFar, Int32 totalRows, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyBatchesAsyncContinued(BulkCopySimpleResultSet internalResults, String updateBulkCommandText, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyBatchesAsync(BulkCopySimpleResultSet internalResults, String updateBulkCommandText, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalRestContinuedAsync(BulkCopySimpleResultSet internalResults, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalRestAsync(CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalAsync(CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table)
+   at EcommerceManager.Data.DataRepository.ImportFileToDB(String filePath, Result& result) in C:\projects\ecommerce_sync\DownloadEcommerceManager\EcommerceManager\Data\DataRepository.cs:line 296
+
+SOURCE
+System.Data
+
+TARGET NAME
+ConvertValue
+
+TARGET MODULE NAME
+System.Data.dll
+
+The given value of type String from the data source cannot be converted to type nvarchar of the specified target column.
+----------------------------------------------------------------------------------
+09/18/2017 02:06:30 - Admin
+THE GIVEN VALUE OF TYPE STRING FROM THE DATA SOURCE CANNOT BE CONVERTED TO TYPE NVARCHAR OF THE SPECIFIED TARGET COLUMN.
+INNER EXCEPTION
+String or binary data would be truncated.
+
+STACK TRACE
+   at System.Data.SqlClient.SqlBulkCopy.ConvertValue(Object value, _SqlMetaData metadata, Boolean isNull, Boolean& isSqlType, Boolean& coercedToDataFeed)
+   at System.Data.SqlClient.SqlBulkCopy.ReadWriteColumnValueAsync(Int32 col)
+   at System.Data.SqlClient.SqlBulkCopy.CopyColumnsAsync(Int32 col, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyRowsAsync(Int32 rowsSoFar, Int32 totalRows, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyBatchesAsyncContinued(BulkCopySimpleResultSet internalResults, String updateBulkCommandText, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyBatchesAsync(BulkCopySimpleResultSet internalResults, String updateBulkCommandText, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalRestContinuedAsync(BulkCopySimpleResultSet internalResults, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalRestAsync(CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalAsync(CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table)
+   at EcommerceManager.Data.DataRepository.ImportFileToDB(String filePath, Result& result) in C:\projects\ecommerce_sync\DownloadEcommerceManager\EcommerceManager\Data\DataRepository.cs:line 296
+
+SOURCE
+System.Data
+
+TARGET NAME
+ConvertValue
+
+TARGET MODULE NAME
+System.Data.dll
+
+The given value of type String from the data source cannot be converted to type nvarchar of the specified target column.
+----------------------------------------------------------------------------------
+09/18/2017 02:27:41 - Admin
+EXECUTION TIMEOUT EXPIRED.  THE TIMEOUT PERIOD ELAPSED PRIOR TO COMPLETION OF THE OPERATION OR THE SERVER IS NOT RESPONDING.
+EXECUTION TIMEOUT EXPIRED.  THE TIMEOUT PERIOD ELAPSED PRIOR TO COMPLETION OF THE OPERATION OR THE SERVER IS NOT RESPONDING.
+INNER EXCEPTION
+The wait operation timed out
+
+STACK TRACE
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.ProcessAttention(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParserStateObject.WriteSni(Boolean canAccumulate)
+   at System.Data.SqlClient.TdsParserStateObject.WritePacket(Byte flushMode, Boolean canAccumulate)
+   at System.Data.SqlClient.TdsParserStateObject.WriteByteArray(Byte[] b, Int32 len, Int32 offsetBuffer, Boolean canAccumulate, TaskCompletionSource`1 completion)
+   at System.Data.SqlClient.TdsParser.WriteEncodingChar(String s, Int32 numChars, Int32 offset, Encoding encoding, TdsParserStateObject stateObj, Boolean canAccumulate)
+   at System.Data.SqlClient.TdsParser.WriteUnterminatedValue(Object value, MetaType type, Byte scale, Int32 actualLength, Int32 encodingByteSize, Int32 offset, TdsParserStateObject stateObj, Int32 paramSize, Boolean isDataFeed)
+   at System.Data.SqlClient.TdsParser.WriteBulkCopyValue(Object value, SqlMetaDataPriv metadata, TdsParserStateObject stateObj, Boolean isSqlType, Boolean isDataFeed, Boolean isNull)
+   at System.Data.SqlClient.SqlBulkCopy.ReadWriteColumnValueAsync(Int32 col)
+   at System.Data.SqlClient.SqlBulkCopy.CopyColumnsAsync(Int32 col, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyRowsAsync(Int32 rowsSoFar, Int32 totalRows, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyBatchesAsyncContinued(BulkCopySimpleResultSet internalResults, String updateBulkCommandText, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.CopyBatchesAsync(BulkCopySimpleResultSet internalResults, String updateBulkCommandText, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalRestContinuedAsync(BulkCopySimpleResultSet internalResults, CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalRestAsync(CancellationToken cts, TaskCompletionSource`1 source)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServerInternalAsync(CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteRowSourceToServerAsync(Int32 columnCount, CancellationToken ctoken)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table, DataRowState rowState)
+   at System.Data.SqlClient.SqlBulkCopy.WriteToServer(DataTable table)
+   at EcommerceManager.Data.DataRepository.ImportFileToDB(String filePath, Result& result) in C:\projects\ecommerce_sync\DownloadEcommerceManager\EcommerceManager\Data\DataRepository.cs:line 296
+
+SOURCE
+.Net SqlClient Data Provider
+
+TARGET NAME
+OnError
+
+TARGET MODULE NAME
+System.Data.dll
+
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+----------------------------------------------------------------------------------
+09/18/2017 16:44:39 - Admin
+EXECUTENONQUERY: COMMANDTEXT PROPERTY HAS NOT BEEN INITIALIZED
+INNER EXCEPTION
+
+
+STACK TRACE
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at EcommerceManager.Data.DataProvider.ExecuteQuery(String sConn, String sql, Boolean isScalar, Result& result) in C:\projects\ecommerce_sync\DownloadEcommerceManager\EcommerceManager\Data\DataProvider.cs:line 65
+
+SOURCE
+System.Data
+
+TARGET NAME
+ValidateCommand
+
+TARGET MODULE NAME
+System.Data.dll
+
+Failed to ExecuteQuery: 
+----------------------------------------------------------------------------------
+09/18/2017 16:45:01 - Admin
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+CANNOT INSERT THE VALUE NULL INTO COLUMN 'PRODUCTID', TABLE 'GTECHAPP_HISANDHERSCLOSET.DBO.PRODUCT_PICTURE_MAPPING'; COLUMN DOES NOT ALLOW NULLS. INSERT FAILS.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+THE STATEMENT HAS BEEN TERMINATED.
+INNER EXCEPTION
+
+
+STACK TRACE
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at EcommerceManager.Data.DataProvider.ExecuteQuery(String sConn, String sql, Boolean isScalar, Result& result) in C:\projects\ecommerce_sync\DownloadEcommerceManager\EcommerceManager\Data\DataProvider.cs:line 65
+
+SOURCE
+.Net SqlClient Data Provider
+
+TARGET NAME
+OnError
+
+TARGET MODULE NAME
+System.Data.dll
+
+Failed to ExecuteQuery:  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='10691305405') and pictureid=79) begin insert into Product_Picture_Mapping values((select id from product where sku = '10691305405'), 79, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='11147605405') and pictureid=80) begin insert into Product_Picture_Mapping values((select id from product where sku = '11147605405'), 80, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='11910005405') and pictureid=81) begin insert into Product_Picture_Mapping values((select id from product where sku = '11910005405'), 81, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='14409505405') and pictureid=82) begin insert into Product_Picture_Mapping values((select id from product where sku = '14409505405'), 82, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='14485505405') and pictureid=83) begin insert into Product_Picture_Mapping values((select id from product where sku = '14485505405'), 83, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='160946') and pictureid=84) begin insert into Product_Picture_Mapping values((select id from product where sku = '160946'), 84, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='160947') and pictureid=85) begin insert into Product_Picture_Mapping values((select id from product where sku = '160947'), 85, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='162340') and pictureid=86) begin insert into Product_Picture_Mapping values((select id from product where sku = '162340'), 86, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='163861') and pictureid=87) begin insert into Product_Picture_Mapping values((select id from product where sku = '163861'), 87, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='167087') and pictureid=88) begin insert into Product_Picture_Mapping values((select id from product where sku = '167087'), 88, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='181003') and pictureid=89) begin insert into Product_Picture_Mapping values((select id from product where sku = '181003'), 89, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='185651') and pictureid=90) begin insert into Product_Picture_Mapping values((select id from product where sku = '185651'), 90, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='188907') and pictureid=91) begin insert into Product_Picture_Mapping values((select id from product where sku = '188907'), 91, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='201680') and pictureid=92) begin insert into Product_Picture_Mapping values((select id from product where sku = '201680'), 92, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='201681') and pictureid=93) begin insert into Product_Picture_Mapping values((select id from product where sku = '201681'), 93, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='222185') and pictureid=94) begin insert into Product_Picture_Mapping values((select id from product where sku = '222185'), 94, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='222850') and pictureid=95) begin insert into Product_Picture_Mapping values((select id from product where sku = '222850'), 95, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='243881') and pictureid=96) begin insert into Product_Picture_Mapping values((select id from product where sku = '243881'), 96, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='243899') and pictureid=97) begin insert into Product_Picture_Mapping values((select id from product where sku = '243899'), 97, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='283496') and pictureid=98) begin insert into Product_Picture_Mapping values((select id from product where sku = '283496'), 98, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='449978') and pictureid=99) begin insert into Product_Picture_Mapping values((select id from product where sku = '449978'), 99, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='453525') and pictureid=100) begin insert into Product_Picture_Mapping values((select id from product where sku = '453525'), 100, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='453549') and pictureid=101) begin insert into Product_Picture_Mapping values((select id from product where sku = '453549'), 101, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='454563') and pictureid=102) begin insert into Product_Picture_Mapping values((select id from product where sku = '454563'), 102, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='457831') and pictureid=103) begin insert into Product_Picture_Mapping values((select id from product where sku = '457831'), 103, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='461651') and pictureid=104) begin insert into Product_Picture_Mapping values((select id from product where sku = '461651'), 104, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='462633') and pictureid=105) begin insert into Product_Picture_Mapping values((select id from product where sku = '462633'), 105, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='464184') and pictureid=106) begin insert into Product_Picture_Mapping values((select id from product where sku = '464184'), 106, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='464185') and pictureid=107) begin insert into Product_Picture_Mapping values((select id from product where sku = '464185'), 107, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='464188') and pictureid=108) begin insert into Product_Picture_Mapping values((select id from product where sku = '464188'), 108, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='464733') and pictureid=109) begin insert into Product_Picture_Mapping values((select id from product where sku = '464733'), 109, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='464757') and pictureid=110) begin insert into Product_Picture_Mapping values((select id from product where sku = '464757'), 110, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='464930') and pictureid=111) begin insert into Product_Picture_Mapping values((select id from product where sku = '464930'), 111, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='466241') and pictureid=112) begin insert into Product_Picture_Mapping values((select id from product where sku = '466241'), 112, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='467966') and pictureid=113) begin insert into Product_Picture_Mapping values((select id from product where sku = '467966'), 113, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='490936') and pictureid=114) begin insert into Product_Picture_Mapping values((select id from product where sku = '490936'), 114, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='492099') and pictureid=115) begin insert into Product_Picture_Mapping values((select id from product where sku = '492099'), 115, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='500758') and pictureid=116) begin insert into Product_Picture_Mapping values((select id from product where sku = '500758'), 116, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='511001') and pictureid=117) begin insert into Product_Picture_Mapping values((select id from product where sku = '511001'), 117, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='515715') and pictureid=118) begin insert into Product_Picture_Mapping values((select id from product where sku = '515715'), 118, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='516935') and pictureid=119) begin insert into Product_Picture_Mapping values((select id from product where sku = '516935'), 119, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='533257') and pictureid=120) begin insert into Product_Picture_Mapping values((select id from product where sku = '533257'), 120, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='534430') and pictureid=121) begin insert into Product_Picture_Mapping values((select id from product where sku = '534430'), 121, 1); end  if not exists(select id from Product_Picture_Mapping where productid=(select id from product where sku='534918') and pictureid=122) begin insert into Product_Picture_Mapping values((select id from product where sku = '534918'), 122, 1); end 

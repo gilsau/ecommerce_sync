@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Manage Categories";
+}
+
+@section Scripts{
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+	<script type="text/javascript" src="~/Scripts/categories.js"></script>
+}
+
+<table class="table table-striped table-bordered">
+	<tr>
+		<th>Website</th>
+		<th>Parent Category</th>
+		<th>Child Category</th>
+		<th>Target Website</th>
+		<th>Target Parent Category</th>
+		<th>Target Child Category</th>
+	</tr>
+	<tr>
+		<td><select ng-model="selWeb" ng-options="website.Url for website in websites track by website.Id"></select></td>
+		<td><select ng-model="selParentCat" ng-options="parentCat.Name for parentCat in parentCats track by parentCat.Id"></select></td>
+		<td><select ng-model="selChildCat" ng-options="parentCat.Name for parentCat in parentCats track by parentCat.Id"></select></td>
+		<td><select ng-model="selWebTgt" ng-options="website.Url for website in websites track by website.Id"></select></td>
+		<td><select ng-model="selParentCatTgt" ng-options="parentCat.Name for parentCat in parentCats track by parentCat.Id"></select></td>
+		<td><select ng-model="selChildCatTgt" ng-options="parentCat.Name for parentCat in parentCats track by parentCat.Id"></select></td>
+	</tr>
+</table> 
