@@ -25,7 +25,7 @@ namespace EcommerceManager.Controllers
 		public JsonResult GetParentCats(int webId)
 		{
 			List<WebsiteCategory> webCats = DataRepository.GetWebsiteCategories();
-			List<Category> parentCats = webCats.Select(wc => new Category() { Id = wc.ParentCatId, Name = wc.ParentCat }).ToList();
+			var parentCats = webCats.Where(wc => wc.WebId == webId).Select(wc => new { Id = wc.ParentCatId, Name = wc.ParentCat }).Distinct().ToList();
 
 			return Json(parentCats, JsonRequestBehavior.AllowGet);
 		}
@@ -34,9 +34,16 @@ namespace EcommerceManager.Controllers
 		public JsonResult GetChildCats(int webId, int parentCatId)
 		{
 			List<WebsiteCategory> webCats = DataRepository.GetWebsiteCategories();
-			List<Category> childCats = webCats.Select(wc => new Category() { Id = wc.ChildCatId, Name = wc.ChildCat }).ToList();
+			List<Category> childCats = webCats.Where(wc => wc.WebId == webId && wc.ParentCatId == parentCatId).Select(wc => new Category() { Id = wc.ChildCatId, Name = wc.ChildCat }).ToList();
 
 			return Json(childCats, JsonRequestBehavior.AllowGet);
+		}
+
+		[HttpGet]
+		public JsonResult GetProducts(int webId, int childCatId)
+		{
+			List<SiteProduct> prods = DataRepository.GetProductsForWebsiteByCategory(webId, childCatId);
+			return Json(prods, JsonRequestBehavior.AllowGet);
 		}
 	}
 }

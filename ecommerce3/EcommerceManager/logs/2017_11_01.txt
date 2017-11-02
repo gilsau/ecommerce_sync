@@ -1,0 +1,124 @@
+----------------------------------------------------------------------------------
+11/01/2017 22:12:54 - Karen
+INVALID OBJECT NAME 'WEBPRODUCT'.
+INNER EXCEPTION
+
+
+STACK TRACE
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at EcommerceManager.Data.DataProvider.GetDataTable(String sConn, String sql, Result& result) in C:\projects\ecommerce_sync\ecommerce3\EcommerceManager\Data\DataProvider.cs:line 29
+
+SOURCE
+.Net SqlClient Data Provider
+
+TARGET NAME
+OnError
+
+TARGET MODULE NAME
+System.Data.dll
+
+Failed to ExecuteQuery: select wp1.sku, wp1.imgUrl, wp1.[name], wp1.[description], categories = STUFF((SELECT ',' + wp2.[Url] + '<br/>' + wp2.SiteParentCategory + '~' + wp2.SiteSubCategory + '<hr/>' FROM webproduct wp2 WHERE wp2.sku = wp1.sku FOR XML PATH('')), 1, 1, '') from webproduct wp1 where SiteSubCategoryId=1 and WebsiteId=59 group by wp1.sku, wp1.imgUrl, wp1.[name], wp1.[description]
+----------------------------------------------------------------------------------
+11/01/2017 22:13:34 - Karen
+INVALID OBJECT NAME 'WEBPRODUCT'.
+INNER EXCEPTION
+
+
+STACK TRACE
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at EcommerceManager.Data.DataProvider.GetDataTable(String sConn, String sql, Result& result) in C:\projects\ecommerce_sync\ecommerce3\EcommerceManager\Data\DataProvider.cs:line 29
+
+SOURCE
+.Net SqlClient Data Provider
+
+TARGET NAME
+OnError
+
+TARGET MODULE NAME
+System.Data.dll
+
+Failed to ExecuteQuery: select wp1.sku, wp1.imgUrl, wp1.[name], wp1.[description], categories = STUFF((SELECT ',' + wp2.[Url] + '<br/>' + wp2.SiteParentCategory + '~' + wp2.SiteSubCategory + '<hr/>' FROM webproduct wp2 WHERE wp2.sku = wp1.sku FOR XML PATH('')), 1, 1, '') from webproduct wp1 where SiteSubCategoryId=1 and WebsiteId=62 group by wp1.sku, wp1.imgUrl, wp1.[name], wp1.[description]
+----------------------------------------------------------------------------------
+11/01/2017 22:14:42 - Karen
+INVALID OBJECT NAME 'WEBPRODUCT'.
+INNER EXCEPTION
+
+
+STACK TRACE
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at EcommerceManager.Data.DataProvider.GetDataTable(String sConn, String sql, Result& result) in C:\projects\ecommerce_sync\ecommerce3\EcommerceManager\Data\DataProvider.cs:line 29
+
+SOURCE
+.Net SqlClient Data Provider
+
+TARGET NAME
+OnError
+
+TARGET MODULE NAME
+System.Data.dll
+
+Failed to ExecuteQuery: select wp1.sku, wp1.imgUrl, wp1.[name], wp1.[description], categories = STUFF((SELECT ',' + wp2.[Url] + '<br/>' + wp2.SiteParentCategory + '~' + wp2.SiteSubCategory + '<hr/>' FROM webproduct wp2 WHERE wp2.sku = wp1.sku FOR XML PATH('')), 1, 1, '') from webproduct wp1 where SiteSubCategoryId=1 and WebsiteId=60 group by wp1.sku, wp1.imgUrl, wp1.[name], wp1.[description]
+----------------------------------------------------------------------------------
+11/01/2017 22:15:24 - Karen
+INVALID OBJECT NAME 'WEBPRODUCT'.
+INNER EXCEPTION
+
+
+STACK TRACE
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at EcommerceManager.Data.DataProvider.GetDataTable(String sConn, String sql, Result& result) in C:\projects\ecommerce_sync\ecommerce3\EcommerceManager\Data\DataProvider.cs:line 29
+
+SOURCE
+.Net SqlClient Data Provider
+
+TARGET NAME
+OnError
+
+TARGET MODULE NAME
+System.Data.dll
+
+Failed to ExecuteQuery: select wp1.sku, wp1.imgUrl, wp1.[name], wp1.[description], categories = STUFF((SELECT ',' + wp2.[Url] + '<br/>' + wp2.SiteParentCategory + '~' + wp2.SiteSubCategory + '<hr/>' FROM webproduct wp2 WHERE wp2.sku = wp1.sku FOR XML PATH('')), 1, 1, '') from webproduct wp1 where SiteSubCategoryId=1 and WebsiteId=59 group by wp1.sku, wp1.imgUrl, wp1.[name], wp1.[description]

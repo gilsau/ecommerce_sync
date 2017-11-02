@@ -128,3 +128,158 @@ TARGET MODULE NAME
 System.Data.dll
 
 Failed to ExecuteQuery:  if exists(select 1 from product where sku='393213') begin update product set Deleted=0, name='MARCHIORO BREAK TIME ALL SEASONS OUTDOOR BIRD FEEDER ', shortDescription='Format: Retail Pkg<br />Age: <br />Platform: N/A<br /><br />It"s time to take a break from the stresses of life and enjoy the little things with the Marchioro Break Time All Seasons Outdoor Bird Feeder. This all-in-one feeder has everything you need to feed all the wild birds in your garden or backyard. Simply twist off the top, fill with bird seed, and use the included rope to hang it from a branch or post. The bird feeder is designed with an overhang and slender base, to help keep food dry, and even doubles as a small bird bath or waterer when the top is filled with water.<br /><br />', fullDescription=null, productCost=7.8400, price=24.9900, stockQuantity=172, length=0, height=0, width=0, weight=3 where name='MARCHIORO BREAK TIME ALL SEASONS OUTDOOR BIRD FEEDER '; end else begin insert into product values(5, 0, 1, 'MARCHIORO BREAK TIME ALL SEASONS OUTDOOR BIRD FEEDER ', 'Format: Retail Pkg<br />Age: <br />Platform: N/A<br /><br />It"s time to take a break from the stresses of life and enjoy the little things with the Marchioro Break Time All Seasons Outdoor Bird Feeder. This all-in-one feeder has everything you need to feed all the wild birds in your garden or backyard. Simply twist off the top, fill with bird seed, and use the included rope to hang it from a branch or post. The bird feeder is designed with an overhang and slender base, to help keep food dry, and even doubles as a small bird bath or waterer when the top is filled with water.<br /><br />', NULL, NULL, 1, 0, 0, NULL, NULL, NULL, 1, 0, 0, 0, 0, 0, 0, '393213', NULL, NULL, 0, 0, NULL, 0, NULL, 0, 0, 0, 0, 0, NULL, 0, 0, 0, 0, NULL, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0.0000, 0, 0, 2, 0, 1, 0, 0, 0, 172, 1, 0, 0, 1, 1, 0, 0, 1, 10000, NULL, 0, 0, 0, 0, 0, NULL, 0, 24.9900, 0.0000, 7.8400, 0, 0.0000, 0.0000, 0, 0.0000, 0, 0.0000, 0, 0, NULL, NULL, 0, 0, 3, 0, 0, 0, NULL, NULL, 0, 1, 0, getdate(), getdate()); end  if not exists(select 1 from Product_Category_Mapping where ProductId=(select top 1 id from product where sku='393213') and CategoryId=79) begin insert into Product_Category_Mapping values((select top 1 id from product where sku='393213'), 79, 0, 1); end  if exists(select id from UrlRecord where EntityName='Product' and EntityId=(select id from product where sku='393213')) begin update UrlRecord set IsActive=1 where EntityName='Product' and EntityId=(select id from product where sku='393213'); end else begin insert into UrlRecord values((select id from product where sku='393213'), 'Product', 'backyard-fun-MARCHIORO-BREAK-TIME-ALL-SEASONS-OUTDOOR-BIRD-FEEDER-', 1, 0); end  if not exists(select 1 from gtechapp_ecommerce.dbo.webproduct where websiteId=4 and sku='393213' and lower(siteParentCategory)='backyard fun' and lower(SiteSubCategory)='Birdhouses') begin insert into gtechapp_ecommerce.dbo.webproduct values('393213', 'MARCHIORO BREAK TIME ALL SEASONS OUTDOOR BIRD FEEDER ', 'Format: Retail Pkg<br />Age: <br />Platform: N/A<br /><br />It"s time to take a break from the stresses of life and enjoy the little things with the Marchioro Break Time All Seasons Outdoor Bird Feeder. This all-in-one feeder has everything you need to feed all the wild birds in your garden or backyard. Simply twist off the top, fill with bird seed, and use the included rope to hang it from a branch or post. The bird feeder is designed with an overhang and slender base, to help keep food dry, and even doubles as a small bird bath or waterer when the top is filled with water.<br /><br />', 'backyard fun', 'Birdhouses', 4, '', getdate()) end 
+----------------------------------------------------------------------------------
+10/31/2017 22:30:01 - Karen
+COLUMN 'WEBPRODUCT.SITEPARENTCATEGORYID' IS INVALID IN THE SELECT LIST BECAUSE IT IS NOT CONTAINED IN EITHER AN AGGREGATE FUNCTION OR THE GROUP BY CLAUSE.
+INNER EXCEPTION
+
+
+STACK TRACE
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at EcommerceManager.Data.DataProvider.GetDataTable(String sConn, String sql, Result& result) in C:\projects\ecommerce_sync\ecommerce3\EcommerceManager\Data\DataProvider.cs:line 29
+
+SOURCE
+.Net SqlClient Data Provider
+
+TARGET NAME
+OnError
+
+TARGET MODULE NAME
+System.Data.dll
+
+Failed to ExecuteQuery: select websiteid, url, siteparentcategoryid, siteparentcategory, sitesubcategoryid, sitesubcategory from webproduct group by url, websiteid, siteparentcategory, sitesubcategory order by url, websiteid, siteparentcategory, sitesubcategory
+----------------------------------------------------------------------------------
+10/31/2017 22:31:50 - Karen
+COLUMN 'WEBPRODUCT.SITEPARENTCATEGORYID' IS INVALID IN THE SELECT LIST BECAUSE IT IS NOT CONTAINED IN EITHER AN AGGREGATE FUNCTION OR THE GROUP BY CLAUSE.
+INNER EXCEPTION
+
+
+STACK TRACE
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at EcommerceManager.Data.DataProvider.GetDataTable(String sConn, String sql, Result& result) in C:\projects\ecommerce_sync\ecommerce3\EcommerceManager\Data\DataProvider.cs:line 29
+
+SOURCE
+.Net SqlClient Data Provider
+
+TARGET NAME
+OnError
+
+TARGET MODULE NAME
+System.Data.dll
+
+Failed to ExecuteQuery: select websiteid, url, siteparentcategoryid, siteparentcategory, sitesubcategoryid, sitesubcategory from webproduct group by url, websiteid, siteparentcategory, sitesubcategory order by url, websiteid, siteparentcategory, sitesubcategory
+----------------------------------------------------------------------------------
+10/31/2017 22:33:50 - Karen
+COLUMN 'WEBPRODUCT.SITEPARENTCATEGORYID' IS INVALID IN THE SELECT LIST BECAUSE IT IS NOT CONTAINED IN EITHER AN AGGREGATE FUNCTION OR THE GROUP BY CLAUSE.
+INNER EXCEPTION
+
+
+STACK TRACE
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at EcommerceManager.Data.DataProvider.GetDataTable(String sConn, String sql, Result& result) in C:\projects\ecommerce_sync\ecommerce3\EcommerceManager\Data\DataProvider.cs:line 29
+
+SOURCE
+.Net SqlClient Data Provider
+
+TARGET NAME
+OnError
+
+TARGET MODULE NAME
+System.Data.dll
+
+Failed to ExecuteQuery: select websiteid, url, siteparentcategoryid, siteparentcategory, sitesubcategoryid, sitesubcategory from webproduct group by url, websiteid, siteparentcategory, sitesubcategory order by url, websiteid, siteparentcategory, sitesubcategory
+----------------------------------------------------------------------------------
+10/31/2017 22:37:03 - Karen
+COLUMN 'WEBPRODUCT.SITEPARENTCATEGORYID' IS INVALID IN THE SELECT LIST BECAUSE IT IS NOT CONTAINED IN EITHER AN AGGREGATE FUNCTION OR THE GROUP BY CLAUSE.
+INNER EXCEPTION
+
+
+STACK TRACE
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at EcommerceManager.Data.DataProvider.GetDataTable(String sConn, String sql, Result& result) in C:\projects\ecommerce_sync\ecommerce3\EcommerceManager\Data\DataProvider.cs:line 29
+
+SOURCE
+.Net SqlClient Data Provider
+
+TARGET NAME
+OnError
+
+TARGET MODULE NAME
+System.Data.dll
+
+Failed to ExecuteQuery: select websiteid, url, siteparentcategoryid, siteparentcategory, sitesubcategoryid, sitesubcategory from webproduct group by url, websiteid, siteparentcategory, sitesubcategory order by url, websiteid, siteparentcategory, sitesubcategory
+----------------------------------------------------------------------------------
+10/31/2017 22:41:35 - Karen
+COLUMN 'WEBPRODUCT.SITEPARENTCATEGORYID' IS INVALID IN THE SELECT LIST BECAUSE IT IS NOT CONTAINED IN EITHER AN AGGREGATE FUNCTION OR THE GROUP BY CLAUSE.
+INNER EXCEPTION
+
+
+STACK TRACE
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader()
+   at EcommerceManager.Data.DataProvider.GetDataTable(String sConn, String sql, Result& result) in C:\projects\ecommerce_sync\ecommerce3\EcommerceManager\Data\DataProvider.cs:line 29
+
+SOURCE
+.Net SqlClient Data Provider
+
+TARGET NAME
+OnError
+
+TARGET MODULE NAME
+System.Data.dll
+
+Failed to ExecuteQuery: select websiteid, url, siteparentcategoryid, siteparentcategory, sitesubcategoryid, sitesubcategory from webproduct group by url, websiteid, siteparentcategory, sitesubcategory order by url, websiteid, siteparentcategory, sitesubcategory

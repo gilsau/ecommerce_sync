@@ -457,6 +457,25 @@ namespace EcommerceManager.Data
 			return webProds;
 		}
 
+		public static List<SiteProduct> GetProductsForWebsiteByCategory(int webId, int childCatId) {
+			Result result = new Result();
+			List<SiteProduct> prods = new List<SiteProduct>();
+
+			//connection strings
+			string webConnStr = GetWebsiteConnStr(webId);
+			string mainConnStr = ConfigurationManager.ConnectionStrings["MainConnStr"].ConnectionString;
+
+			string sql = string.Format("select wp1.sku, wp1.imgUrl, wp1.[name], wp1.[description], categories = STUFF((SELECT ',' + wp2.[Url] + '~' + wp2.SiteParentCategory + '~' + wp2.SiteSubCategory + '///' FROM webproduct wp2 WHERE wp2.sku = wp1.sku FOR XML PATH('')), 1, 1, '') from webproduct wp1 where SiteSubCategoryId={0} and WebsiteId={1} group by wp1.sku, wp1.imgUrl, wp1.[name], wp1.[description]", childCatId, webId);
+			DataProvider.GetDataTable(mainConnStr, sql, out result);
+
+			if (result.Success)
+			{
+				prods = MapProducts.MapDBToSiteProdList((DataTable)result.ReturnObj);
+			}
+
+			return prods;
+		}
+
 		public static int GetProductCount() {
 			return GetProductCount(ProdCountType.ProductImportPreAll, null, null);
 		}
@@ -561,7 +580,9 @@ namespace EcommerceManager.Data
 					}
 
 					//save product to ecommerce db
-					sbProductEcomm.Append(string.Format(" if not exists(select 1 from webproduct where websiteId={0} and sku='{1}' and lower(siteParentCategory)='{2}' and lower(SiteSubCategory)='{3}') begin insert into webproduct values('{1}', '{4}', '{5}', '{2}', '{3}', {0}, '{6}', getdate()) end ", model.webId, dr[1].ToString(), webParentCat.ToLower(), webCat.ToLower(), sProdName, sProdDesc, sWebUrl));
+					string sImgUrl = dr[7].ToString();
+					string sSKU = dr[1].ToString();
+					sbProductEcomm.Append(string.Format(" if not exists(select 1 from webproduct where websiteId={0} and sku='{2}' and lower(siteParentCategory)='{6}' and lower(SiteSubCategory)='{8}') begin insert into webproduct values('{1}', '{2}', '{3}', '{4}', {5}, '{6}', {7}, '{8}', {0}, '{9}', getdate()) end ", model.webId, sImgUrl, sSKU, sProdName, sProdDesc, webParentCatId, webParentCat.ToLower(), webCatId, webCat.ToLower(), sWebUrl));
 				}
 
 				//run sql to insert products on website's db
@@ -732,12 +753,12 @@ namespace EcommerceManager.Data
 		public static List<WebsiteCategory> GetWebsiteCategories() {
 			List<WebsiteCategory> Cats = new List<WebsiteCategory>();
 			Result result = new Result();
-			string sql = "select websiteid, url, siteparentcategory, sitesubcategory from webproduct group by url, websiteid, siteparentcategory, sitesubcategory order by url, websiteid, siteparentcategory, sitesubcategory";
+			string sql = "select websiteid, url, siteparentcategoryid, siteparentcategory, sitesubcategoryid, sitesubcategory from webproduct group by url, websiteid, siteparentcategory, siteparentcategoryid, sitesubcategory, sitesubcategoryid order by url, websiteid, siteparentcategory, sitesubcategory";
 			DataProvider.GetDataTable(ConfigurationManager.ConnectionStrings["MainConnStr"].ConnectionString, sql, out result);
 
 			DataRowCollection rows = null;
 			if (result.Success) {
-				rows = (DataRowCollection)result.ReturnObj;
+				rows = ((DataTable)result.ReturnObj).Rows;
 			}
 
 			if (rows != null)

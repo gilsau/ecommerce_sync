@@ -39,5 +39,22 @@ namespace EcommerceManager.Helpers
             
             return prods;
         }
-    }
+
+		public static List<SiteProduct> MapDBToSiteProdList(DataTable dt)
+		{
+			List<SiteProduct> prods = new List<SiteProduct>();
+			foreach (DataRow dr in dt.Rows)
+			{
+				SiteProduct prod = new SiteProduct();
+				prod.Sku = dr[0].ToString();
+				prod.ImgUrl = dr[1].ToString();
+				prod.Name = dr[2].ToString();
+				prod.Description = dr[3].ToString();
+				prod.Categories = dr[4].ToString();
+				prods.Add(prod);
+			}
+
+			return prods;
+		}
+	}
 }

@@ -21,6 +21,15 @@ namespace EcommerceManager.Models
         public List<string> Products { get; set; }
     }
 
+	public class SiteProduct
+	{
+		public string Sku { get; set; }
+		public string ImgUrl  { get; set; }
+		public string Name { get; set; }
+		public string Description { get; set; }
+		public string Categories { get; set; }
+	}
+
     public class Product
     {
         public int RowNum { get; set; }

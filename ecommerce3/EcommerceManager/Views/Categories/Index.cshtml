@@ -9,19 +9,51 @@
 
 <table class="table table-striped table-bordered">
 	<tr>
+		<td>&nbsp;</td>
+		<td><span class="btn btn-sm btn-primary center-block">delete</span></td>
+		<td><span class="btn btn-sm btn-primary center-block">delete</span></td>
+	</tr>
+	<tr>
 		<th>Website</th>
 		<th>Parent Category</th>
 		<th>Child Category</th>
+		<th>&nbsp;</th>
 		<th>Target Website</th>
 		<th>Target Parent Category</th>
 		<th>Target Child Category</th>
 	</tr>
 	<tr>
-		<td><select ng-model="selWeb" ng-options="website.Url for website in websites track by website.Id"></select></td>
-		<td><select ng-model="selParentCat" ng-options="parentCat.Name for parentCat in parentCats track by parentCat.Id"></select></td>
-		<td><select ng-model="selChildCat" ng-options="parentCat.Name for parentCat in parentCats track by parentCat.Id"></select></td>
-		<td><select ng-model="selWebTgt" ng-options="website.Url for website in websites track by website.Id"></select></td>
-		<td><select ng-model="selParentCatTgt" ng-options="parentCat.Name for parentCat in parentCats track by parentCat.Id"></select></td>
-		<td><select ng-model="selChildCatTgt" ng-options="parentCat.Name for parentCat in parentCats track by parentCat.Id"></select></td>
+		<td><select class="form-control" ng-change="GetParentCats(false)" ng-model="selWeb" ng-options="website.Url for website in websites track by website.Id"></select></td>
+		<td><select class="form-control" ng-change="GetChildCats(false)" ng-model="selParentCat" ng-options="parentCat.Name for parentCat in parentCats track by parentCat.Id"></select>
+			<input type="text" class="form-control" ng-model="txtParentCat" />
+			<span class="btn btn-sm btn-primary center-block">rename</span>
+		</td>
+		<td><select class="form-control" ng-change="GetProducts()" ng-model="selChildCat" ng-options="childCat.Name for childCat in childCats track by childCat.Id"></select>
+			<input type="text" class="form-control" ng-model="txtChildCat" />
+			<span class="btn btn-sm btn-primary center-block">rename</span>
+		</td>
+		<td><span class="btn btn-sm btn-primary center-block">copy</span>
+			<span class="btn btn-sm btn-primary center-block">move</span>
+		</td>
+		<td><select class="form-control" ng-change="GetParentCats(true)" ng-model="selWebTgt" ng-options="website.Url for website in websites track by website.Id"></select></td>
+		<td><select class="form-control" ng-change="GetChildCats(true)" ng-model="selParentCatTgt" ng-options="parentCat.Name for parentCat in parentCatsTgt track by parentCat.Id"></select></td>
+		<td><select class="form-control" ng-model="selChildCatTgt" ng-options="childCat.Name for childCat in childCatsTgt track by childCat.Id"></select></td>
 	</tr>
 </table> 
+
+<table class="table table-striped table-bordered">
+	<tr>
+		<th>Id</th>
+		<th>Sku/Image</th>
+		<th>Name</th>
+		<th>Description</th>
+		<th>Categories</th>
+	</tr>
+	<tr ng-repeat="p in products" ng-bind-html-unsafe="p.Categories">
+		<td>{{ p.Id }}</td>
+		<td>{{ p.Sku }}<br/><a target="_blank" href="{{ p.ImgUrl }}"><img ng-src="{{ p.ImgUrl }}" style="height:150px;" /></a></td>
+		<td>{{ p.Name }}</td>
+		<td>{{ p.Description }}</td>
+		<td>{{ p.Categories }}</td>
+	</tr>
+</table>
